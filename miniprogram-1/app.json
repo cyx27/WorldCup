@@ -1,21 +1,36 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/logs/logs"
+        "pages/logs/logs",
+        "pages/event_info/event_info",
+        "pages/game/game"
     ],
     "tabBar": {
-        "color": "#E2A9F3",
+        "color": "#333",
+        "selectedColor": "#00aa98",
+        "position": "bottom",
+        "borderStyle": "black",
         "list": [
-            {
-                "pagePath": "pages/index/index",
-                "text": "首页"
-            },
-            {
-                "pagePath": "pages/logs/logs",
-                "text": "日志"
-            }
+          {
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "static/images/ball.png",
+            "selectedIconPath": "static/images/ball-active.png"
+          },
+          {
+            "pagePath": "pages/event_info/event_info",
+            "text": "赛事信息",
+            "iconPath": "static/images/rank.png",
+            "selectedIconPath": "static/images/rank-active.png"
+          },
+          {
+            "pagePath": "pages/game/game",
+            "text": "趣味游戏",
+            "iconPath": "static/images/stats.png",
+            "selectedIconPath": "static/images/stats-active.png"
+          }
         ]
-    },
+      },
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#CEF6EC",
