@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="usermotto">
+    <button bindtap="clickMe">点击我</button>
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+  
+  <block wx:for="{{items}}">
+    {{item}}
+</block>
+</view>
