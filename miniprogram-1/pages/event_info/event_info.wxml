@@ -1,0 +1,6 @@
+<view class="team">
+    <view ><navigator url="/pages/team_info/team_info">卡塔尔</navigator></view>
+    <view>厄瓜多尔</view>
+    <view>塞内加尔</view>
+    <view>荷兰</view>
+</view>

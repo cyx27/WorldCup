@@ -1,0 +1,7 @@
+<!--pages/team_info.wxml-->
+<swiper indicator-dots circular>
+    <swiper-item wx:for="{{swiperList}}">
+        <image src="{{baseUrl}}{{item}}"></image>
+    </swiper-item>
+</swiper>
+
