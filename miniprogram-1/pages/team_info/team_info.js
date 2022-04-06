@@ -5,16 +5,21 @@ Page({
      * 页面的初始数据
      */
     data: {
-        baseUrl: "/static/images/team_image/Qatar/",
+        name: "",
+        baseUrl: "",
         swiperList: ["1.png","2.png","3.png"]
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-
+    onLoad: function (e) {
+        this.setData({
+            name: e.team_name,
+            baseUrl: "/static/images/team_image/" + e.team_name + "/"
+        });
     },
+
 
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -27,7 +32,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        
     },
 
     /**

@@ -1,1 +1,35 @@
 /* pages/team_info.wxss */
+swiper{
+    height: 200px;
+  }
+  .optionBox {
+    width: 100%;
+    height: 100%;
+  }
+  .optionBox image {
+    width: 100%;
+    height: 100%;
+  }
+  .swiperText {
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    font-family: bariol_bold;
+    font-size: 0.5em;
+    color: #4a4a4a;
+  }
+  
+  .mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .5);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .perch {
+    width: 100%;
+    height: 100%;
+  }
+  

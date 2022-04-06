@@ -1,16 +1,2 @@
 <!--index.wxml-->
-<view class="page__bd" style="height: 100%;">
-  <view class="weui-button">
-    <button bindtap="clickMe">点击我</button>
-    <view class="weui-msg">
-    !!!!!!!!!!!!
-    <text class="weui-aritical">{{motto}}</text>
-    </view>
-  </view>
-
-  <view class="weui-msg">
-  <block wx:for="{{items}}">
-    {{item}}
-  </block>
-  </view> 
-</view>
+首页
