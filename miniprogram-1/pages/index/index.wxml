@@ -1,2 +1,3 @@
 <!--index.wxml-->
-首页
+<image src="https://s2.loli.net/2022/04/07/mKWZTdERwykNj9i.jpg" style="width: 100%;"></image>
+<text>首页</text>

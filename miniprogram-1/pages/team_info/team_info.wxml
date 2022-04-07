@@ -2,8 +2,8 @@
 <swiper display-multiple-items='1' current='{{ centerItem }}' bindchange='changeFun' circular='true' previous-margin='50' next-margin='50' autoplay='true' interval='2000'>
     <swiper-item wx:for="{{swiperList}}" wx:key="*this">
       <view class='optionBox' style='text-align:center'>
-        <view class='mask' wx:if='{{ index != centerItem }}'></view>
-        <image src="{{baseUrl}}{{item}}" mode='aspectFit' />
+        <view class='mask' wx:if='{{ index != currentId }}'></view>
+        <image src="{{item}}" mode='aspectFit' />
         <view class='swiperText' style='font-size:0.5em;'></view>
       </view>
     </swiper-item> 

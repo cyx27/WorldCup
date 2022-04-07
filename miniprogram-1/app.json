@@ -15,20 +15,20 @@
             {
                 "pagePath": "pages/index/index",
                 "text": "首页",
-                "iconPath": "static/images/ball.png",
-                "selectedIconPath": "static/images/ball-active.png"
+                "iconPath": "static/images/logo/ball.png",
+                "selectedIconPath": "static/images/logo/ball-active.png"
             },
             {
                 "pagePath": "pages/event_info/event_info",
                 "text": "赛事信息",
-                "iconPath": "static/images/rank.png",
-                "selectedIconPath": "static/images/rank-active.png"
+                "iconPath": "static/images/logo/rank.png",
+                "selectedIconPath": "static/images/logo/rank-active.png"
             },
             {
                 "pagePath": "pages/game/game",
                 "text": "趣味游戏",
-                "iconPath": "static/images/stats.png",
-                "selectedIconPath": "static/images/stats-active.png"
+                "iconPath": "static/images/logo/stats.png",
+                "selectedIconPath": "static/images/logo/stats-active.png"
             }
         ]
     },
