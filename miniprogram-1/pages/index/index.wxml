@@ -1,9 +1,4 @@
 <!--index.wxml-->
-<<<<<<< HEAD
 首页
 <button bindtap="handletap">调用</button>
 <view wx:for="{{player}}" wx:for-item="pro" wx:key="idx"> id:{{pro.id}} name:{{pro.name}} </view>
-=======
-<image src="https://s2.loli.net/2022/04/07/mKWZTdERwykNj9i.jpg" style="width: 100%;"></image>
-<text>首页</text>
->>>>>>> 6d5966db83ce43dcab4b0adc60b2c69f7205c8b1
