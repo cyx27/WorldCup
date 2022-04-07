@@ -6,12 +6,7 @@ Page({
      */
     data: {
         name: "",
-<<<<<<< HEAD
-        baseUrl: "",
-        swiperList: ["1.png","2.png","3.png"],
-=======
         swiperList: [],
->>>>>>> 6d5966db83ce43dcab4b0adc60b2c69f7205c8b1
         currentId: 0
     },
 

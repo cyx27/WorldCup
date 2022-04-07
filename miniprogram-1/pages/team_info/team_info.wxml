@@ -3,11 +3,7 @@
     <swiper-item wx:for="{{swiperList}}" wx:key="*this" >
       <view class='optionBox' style='text-align:center'>
         <view class='mask' wx:if='{{ index != currentId }}'></view>
-<<<<<<< HEAD
-        <image src="{{baseUrl}}{{item}}" mode='aspectFit' />
-=======
         <image src="{{item}}" mode='aspectFit' />
->>>>>>> 6d5966db83ce43dcab4b0adc60b2c69f7205c8b1
         <view class='swiperText' style='font-size:0.5em;'></view>
       </view>
     </swiper-item> 
