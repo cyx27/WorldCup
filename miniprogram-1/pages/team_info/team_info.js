@@ -7,12 +7,18 @@ Page({
     data: {
         name: "",
         baseUrl: "",
-        swiperList: ["1.png","2.png","3.png"]
+        swiperList: ["1.png","2.png","3.png"],
+        currentId: 0
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
+    ChangeHI(e){
+        this.setData({
+            currentId:e.detail.current
+        });
+    },
     onLoad: function (e) {
         this.setData({
             name: e.team_name,

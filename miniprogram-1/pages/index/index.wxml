@@ -1,2 +1,4 @@
 <!--index.wxml-->
 首页
+<button bindtap="handletap">调用</button>
+<view wx:for="{{player}}" wx:for-item="pro" wx:key="idx"> id:{{pro.id}} name:{{pro.name}} </view>

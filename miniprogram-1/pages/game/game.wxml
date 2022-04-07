@@ -1,0 +1,13 @@
+
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_active">
+       <view class="weui-cell__bd">
+            <input class="weui-textarea" placeholder-class="weui-input__placeholder" placeholder="0" style="height: 3.3em;" bindinput="handleinput"/>
+            <view aria-role="option" title="字数统计" class="weui-textarea-counter">{{num}}/200</view>
+       </view>
+  </view>
+</view>
+<button bindtap="handletap" data-operation="{{1}}" >+</button>
+<button bindtap="handletap" data-operation="{{-1}}">-</button>
+<view>----------------------</view>
+<view>{{num}}</view>

@@ -1,0 +1,12 @@
+.big_match {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: gainsboro;
+}
+.time {
+  display: flex;
+  flex-direction: column;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color:rgb(237, 237, 243);
+}

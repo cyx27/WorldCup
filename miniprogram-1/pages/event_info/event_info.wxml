@@ -1,5 +1,5 @@
-<view class="team">
-    <view>A</view>
+
+ <view class="team">
     <view ><navigator url="/pages/team_info/team_info?team_name=Qatar">卡塔尔</navigator></view>
     <view><navigator url="/pages/team_info/team_info?team_name=Ecuador">厄瓜多尔</navigator></view>
     <view><navigator url="/pages/team_info/team_info?team_name=Senegal">塞内加尔</navigator></view>

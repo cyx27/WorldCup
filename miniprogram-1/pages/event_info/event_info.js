@@ -1,5 +1,6 @@
-Component({
-    properties: {},
-    data: {},
-    methods: {}
-});
+Page({
+
+  data: {
+    
+  }
+})

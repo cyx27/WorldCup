@@ -33,12 +33,11 @@
         ]
     },
     "window": {
-        "backgroundTextStyle": "light",
+        "backgroundTextStyle": "dark",
         "navigationBarBackgroundColor": "#CEF6EC",
         "navigationBarTitleText": "",
         "navigationBarTextStyle": "black",
-        "enablePullDownRefresh": true,
-        "backgroundColor": "#EAB9B9"
+        "enablePullDownRefresh": true
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json",
