@@ -1,5 +1,17 @@
 {
   "component": true,
   "usingComponents": {
+<<<<<<< HEAD
+=======
+  },
+  "navigationBarBackgroundColor": "#F781F3",
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "title",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": "false"
+>>>>>>> 6d5966db83ce43dcab4b0adc60b2c69f7205c8b1
   }
 }
