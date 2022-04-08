@@ -13,12 +13,14 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
+
     ChangeHI(e){
         this.setData({
             currentId:e.detail.current
         });
     },
     onLoad: function (e) {
+        console.log(e)
         this.setData({
             name: e.team_name
         });
@@ -48,7 +50,7 @@ Page({
         })
     },
     /**
-     * 生命周期函数--监听页面初次渲染完成
+     * 生命周期函数-监听页面初次渲染完成
      */
     onReady: function () {
 
