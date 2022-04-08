@@ -12,3 +12,8 @@
    球队简介
 {{name}}
 </view>
+<view>--------------------------------</view>
+<view>位置  号码  姓名  国籍</view>
+<view wx:for="{{player}}" wx:for-item="pro" wx:key="idx">
+  <view wx:for="{{pro}}" wx:key="key" wx:for-item="item"> {{index}} {{item}}</view>
+</view>

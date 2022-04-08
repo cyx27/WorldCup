@@ -1,66 +1,56 @@
 
  <view class="team">
     <view>A组</view>
-    <view ><navigator url="/pages/team_info/team_info?team_name=Qatar">卡塔尔</navigator></view>
-    <view><navigator url="/pages/team_info/team_info?team_name=Ecuador">厄瓜多尔</navigator></view>
-    <view><navigator url="/pages/team_info/team_info?team_name=Senegal">塞内加尔</navigator></view>
-    <view><navigator url="/pages/team_info/team_info?team_name=Netherlands">荷兰</navigator></view>
+    <view wx:for="{{groupA}}">
+    <navigator url="/pages/team_info/team_info?team_name={{item}}">{{item}}</navigator>
+    </view>
 </view>
 <view>---------------</view>
 <view class="team">
-    <view>B组</view>
-    <view>英格兰</view>
-    <view>伊朗</view>
-    <view>美国</view>
-    <view>威尔士</view>
+    <view wx:for="{{groupB}}">
+    <navigator url="/pages/team_info/team_info?team_name={{item}}">{{item}}</navigator>
+    </view>
 </view>
 <view>---------------</view>
 <view class="team">
-    <view>C组</view>
-    <view>阿根廷</view>
-    <view>沙特阿拉伯</view>
-    <view>墨西哥</view>
-    <view>波兰</view>
+    <view wx:for="{{groupC}}">
+    <navigator url="/pages/team_info/team_info?team_name={{item}}">{{item}}</navigator>
+    </view>
 </view>
 <view>---------------</view>
 <view class="team">
     <view>D组</view>
-    <view>法国</view>
-    <view>秘鲁</view>
-    <view>丹麦</view>
-    <view>突尼斯</view>
+    <view wx:for="{{groupD}}">
+    <navigator url="/pages/team_info/team_info?team_name={{item}}">{{item}}</navigator>
+    </view>
 </view>
 <view>---------------</view>
 <view class="team">
     <view>E组</view>
-    <view>西班牙</view>
-    <view>哥斯达黎加</view>
-    <view>德国</view>
-    <view>日本</view>
+    <view wx:for="{{groupE}}">
+    <navigator url="/pages/team_info/team_info?team_name={{item}}">{{item}}</navigator>
+    </view>
 </view>
 <view>---------------</view>
 <view class="team">
     <view>F组</view>
-    <view>比利时</view>
-    <view>加拿大</view>
-    <view>摩洛哥</view>
-    <view>克罗地亚</view>
+    <view wx:for="{{groupF}}">
+    <navigator url="/pages/team_info/team_info?team_name={{item}}">{{item}}</navigator>
+    </view>
 </view>
 <view>---------------</view>
 <view class="team">
     <view>G组</view>
-    <view>巴西</view>
-    <view>塞尔维亚</view>
-    <view>瑞士</view>
-    <view>喀麦隆</view>
+    <view wx:for="{{groupG}}">
+    <navigator url="/pages/team_info/team_info?team_name={{item}}">{{item}}</navigator>
+    </view>
 </view>
 <view>---------------</view>
 <view class="team">
     <view>H组</view>
-    <view>葡萄牙</view>
-    <view>加纳</view>
-    <view>乌拉圭</view>
-    <view>韩国</view>
+    <view wx:for="{{groupH}}">
+    <navigator url="/pages/team_info/team_info?team_name={{item}}">{{item}}</navigator>
+    </view>
 </view>
 
 

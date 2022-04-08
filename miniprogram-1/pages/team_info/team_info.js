@@ -7,7 +7,8 @@ Page({
     data: {
         name: "",
         swiperList: [],
-        currentId: 0
+        currentId: 0,
+        player:[]
     },
 
     /**
@@ -24,20 +25,36 @@ Page({
         this.setData({
             name: e.team_name
         });
+        let that = this;
+        var url="http://150.158.20.204:8000";
+        wx.request({
+              url: url,
+              data:{
+               name:that.data.name
+              },
+              method:'get',
+              header: {'Content-Type': 'application/json'},
+              success: function(res) {
+                console.log(res.data);
+                      that.setData({
+                        player:res.data
+                      })
+                 }
+            })
         switch(e.team_name){
-            case "Qatar":
+            case "卡塔尔":
                 this.setData({
                     swiperList: ["https://s2.loli.net/2022/04/07/HSqwdFvL9rDezBQ.jpg","https://s2.loli.net/2022/04/07/4EW8nK3oHujBIkU.jpg","https://s2.loli.net/2022/04/07/ItAnYSPBkF4MczW.jpg"]
                 });break;
-            case "Senegal":
+            case "厄瓜多尔":
                 this.setData({
                     swiperList: ["https://s2.loli.net/2022/04/07/JxVO3EYQBmMTHWk.jpg","https://s2.loli.net/2022/04/07/d1S6nXgQ93wWRAG.jpg","https://s2.loli.net/2022/04/07/3LcwCrEgfUqyzBS.jpg"]
                 });break;
-            case "Ecuador":
+            case "塞内加尔":
                 this.setData({
                     swiperList: ["https://s2.loli.net/2022/04/07/Wk62VRlz3i1JYjh.jpg","https://s2.loli.net/2022/04/07/NaH2iunMlk1drxY.jpg","https://s2.loli.net/2022/04/07/WUOvuAQzRVTohKi.jpg"]
                 });break;
-            case "Netherlands":
+            case "荷兰":
                 this.setData({
                     swiperList: ["https://s2.loli.net/2022/04/07/OLgmB4fG8KAqeQh.jpg","https://s2.loli.net/2022/04/07/Dizxo29v3PbUFYt.jpg","https://s2.loli.net/2022/04/07/sp2Z1r3vcTGduoV.jpg"]
                 });break;
