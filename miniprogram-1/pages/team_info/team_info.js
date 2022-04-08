@@ -8,13 +8,12 @@ Page({
         name: "",
         swiperList: [],
         currentId: 0,
-        player:[]
+        player:[],
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-
     ChangeHI(e){
         this.setData({
             currentId:e.detail.current

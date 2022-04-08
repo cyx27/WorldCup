@@ -13,7 +13,15 @@
 {{name}}
 </view>
 <view>--------------------------------</view>
-<view>位置  号码  姓名  国籍</view>
+<view class="title">
+  <view class="item">位置 姓名</view>
+</view>
 <view wx:for="{{player}}" wx:for-item="pro" wx:key="idx">
-  <view wx:for="{{pro}}" wx:key="key" wx:for-item="item"> {{index}} {{item}}</view>
+  <view wx:for="{{pro}}" wx:key="key" wx:for-item="item" wx:for-index="position">
+    <view wx:for="{{item}}" wx:key="*this" wx:for-item="p">
+    <view class='whitebar' wx:if='{{index%2==0}}'>{{position}} {{p}}</view>
+    <view class='greybar' wx:if='{{index%2==1}}'> {{position}} {{p}}</view>
+     {{add()}}
+    </view>
+  </view>
 </view>

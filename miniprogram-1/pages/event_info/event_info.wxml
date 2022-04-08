@@ -1,56 +1,56 @@
 
  <view class="team">
     <view>A组</view>
-    <view wx:for="{{groupA}}" >
+    <view wx:for="{{groupA}}" wx:key="*this">
     <navigator url="/pages/team_info/team_info?team_name={{item[0]}}"><image src="{{item[1]}}" class="flag"></image>  {{item[0]}}</navigator>
     </view>
 </view>
 <view>---------------</view>
 <view class="team">
     <view>B组</view>
-    <view wx:for="{{groupB}}">
+    <view wx:for="{{groupB}}" wx:key="*this">
     <navigator url="/pages/team_info/team_info?team_name={{item[0]}}"><image src="{{item[1]}}" class="flag"></image>  {{item[0]}}</navigator>
     </view>
 </view>
 <view>---------------</view>
 <view class="team">
     <view>C组</view>
-    <view wx:for="{{groupC}}">
+    <view wx:for="{{groupC}}" wx:key="*this">
     <navigator url="/pages/team_info/team_info?team_name={{item[0]}}"><image src="{{item[1]}}" class="flag"></image>  {{item[0]}}</navigator>
     </view>
 </view>
 <view>---------------</view>
 <view class="team">
     <view>D组</view>
-    <view wx:for="{{groupD}}">
+    <view wx:for="{{groupD}}" wx:key="*this">
     <navigator url="/pages/team_info/team_info?team_name={{item[0]}}"><image src="{{item[1]}}" class="flag"></image>  {{item[0]}}</navigator>
     </view>
 </view>
 <view>---------------</view>
 <view class="team">
     <view>E组</view>
-    <view wx:for="{{groupE}}">
+    <view wx:for="{{groupE}}" wx:key="*this">
     <navigator url="/pages/team_info/team_info?team_name={{item[0]}}"><image src="{{item[1]}}" class="flag"></image>  {{item[0]}}</navigator>
     </view>
 </view>
 <view>---------------</view>
 <view class="team">
     <view>F组</view>
-    <view wx:for="{{groupF}}">
+    <view wx:for="{{groupF}}" wx:key="*this">
     <navigator url="/pages/team_info/team_info?team_name={{item[0]}}"><image src="{{item[1]}}" class="flag"></image>  {{item[0]}}</navigator>
     </view>
 </view>
 <view>---------------</view>
 <view class="team">
     <view>G组</view>
-    <view wx:for="{{groupG}}">
+    <view wx:for="{{groupG}}" wx:key="*this">
     <navigator url="/pages/team_info/team_info?team_name={{item[0]}}"><image src="{{item[1]}}" class="flag"></image>  {{item[0]}}</navigator>
     </view>
 </view>
 <view>---------------</view>
 <view class="team">
     <view>H组</view>
-    <view wx:for="{{groupH}}">
+    <view wx:for="{{groupH}}" wx:key="*this">
     <navigator url="/pages/team_info/team_info?team_name={{item[0]}}"><image src="{{item[1]}}" class="flag"></image>  {{item[0]}}</navigator>
     </view>
 </view>
