@@ -1,10 +1,9 @@
 {
   "component": true,
-  "usingComponents": {
-  },
-  "navigationBarBackgroundColor": "#F781F3",
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#006400",
   "window": {
-    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarBackgroundColor": "#000000",
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "title",
     "backgroundColor": "#eeeeee",
