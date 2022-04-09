@@ -13,15 +13,28 @@
 {{name}}
 </view>
 <view>--------------------------------</view>
-<view class="title">
-  <view class="item">位置 姓名</view>
+<view class="titlebat">
+  <view class="text">球员</view>
 </view>
-<view wx:for="{{player}}" wx:for-item="pro" wx:key="idx">
-  <view wx:for="{{pro}}" wx:key="key" wx:for-item="item" wx:for-index="position">
-    <view wx:for="{{item}}" wx:key="*this" wx:for-item="p">
-    <view class='whitebar' wx:if='{{index%2==0}}'>{{position}} {{p}}</view>
-    <view class='greybar' wx:if='{{index%2==1}}'> {{position}} {{p}}</view>
-     {{add()}}
+<view class="title" style="flex-direction:row;">
+  <view class="item1">位置</view>
+  <view class="item2">姓名</view>
+</view>
+<view wx:for="{{player}}" wx:for-item="pro" wx:key="idx" class="players" style="flex-direction:column;">
+  <view wx:for="{{pro}}" wx:key="key" wx:for-item="item" wx:for-index="name" >
+    <view class='whitebar' wx:if='{{item[0]%2==0}}' style="flex-direction:row;">
+      <view class="position">{{item[1]}}</view>
+      <view class="player">
+        <image src="{{item[2]}}" style="height: 50rpx;width: 50rpx;position: absolute;top:20rpx"/> 
+        <view style="left: 180rpx;position: absolute;">{{name}}</view>
+      </view>
+     </view>
+    <view class='greybar' wx:if='{{item[0]%2==1}}' style="flex-direction:row;">
+      <view class="position">{{item[1]}}</view> 
+      <view class="player">
+        <image src="{{item[2]}}" style="height: 50rpx;width: 50rpx;position: absolute;top:20rpx"/> 
+        <view style="left: 180rpx;position: absolute;">{{name}}</view>
+      </view>
     </view>
   </view>
 </view>
