@@ -103,6 +103,10 @@ page {
 .teamname{
   font-size: 28rpx;
   position:absolute;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 120rpx;
 }
 .pick{
   color:black;
