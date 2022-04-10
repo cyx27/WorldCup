@@ -1,0 +1,28 @@
+var bar = function UTCformat(utc) {
+  var date = getDate(utc);
+  var anotherday=false;
+  var anothermonth=false;
+      year = date.getFullYear(),
+      hour = date.getHours() + 8;
+      if(hour>=24){
+        hour=hour-24;
+        anotherday=true;
+      }
+      minutes = date.getMinutes() > 9 ? date.getMinutes() : '0' + date.getMinutes();
+      if(anotherday) {
+        day = date.getDate()+1;
+        if(day>30){
+          day=day-30;
+          anothermonth=true;
+          month=date.getMonth()+2;
+        }
+      }else{
+        day = date.getDate();
+        month=date.getMonth()+1;
+      } 
+      if(hour<12)hour='0'+hour;
+      if(day<10)day='0'+day;
+  var res = year + '-' + month + '-' + day + ' ' + hour + ':' + minutes;
+  return res;
+} 
+module.exports = {bar : bar}

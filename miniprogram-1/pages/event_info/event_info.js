@@ -1,6 +1,19 @@
 Page({
 
   data: {
+    schedule:[],
+    nowgroup:true,
+    corrent:0,
+    urls:[
+      "https://www.dongqiudi.com/sport-data/soccer/biz/data/schedule?season_id=10346&app=dqd&version=0&platform=web",
+      "https://www.dongqiudi.com/sport-data/soccer/biz/data/schedule?season_id=10346&round_id=11467&gameweek=2&app=dqd&platform=web&version=0",
+      "https://www.dongqiudi.com/sport-data/soccer/biz/data/schedule?season_id=10346&round_id=11467&gameweek=3&app=dqd&platform=web&version=0",
+      "https://www.dongqiudi.com/sport-data/soccer/biz/data/schedule?season_id=10346&round_id=11582&app=dqd&platform=web&version=0",
+      "https://www.dongqiudi.com/sport-data/soccer/biz/data/schedule?season_id=10346&round_id=11584&app=dqd&platform=web&version=0",
+      "https://www.dongqiudi.com/sport-data/soccer/biz/data/schedule?season_id=10346&round_id=11586&app=dqd&platform=web&version=0",
+      "https://www.dongqiudi.com/sport-data/soccer/biz/data/schedule?season_id=10346&round_id=11587&app=dqd&platform=web&version=0",
+      "https://www.dongqiudi.com/sport-data/soccer/biz/data/schedule?season_id=10346&round_id=11588&app=dqd&platform=web&version=0"
+    ],
     groupA:[
       ['卡塔尔', 'https://sd.qunliao.info/fastdfs3/M00/B5/7C/ChOxM1xC2PyAX4i0AAAJXV6GRFw977.png','1'],
       ['厄瓜多尔', 'https://sd.qunliao.info/fastdfs3/M00/B5/75/ChOxM1xC2FSADy_DAAALaURezqo279.png','2'],
@@ -49,5 +62,44 @@ Page({
       ['乌拉圭', 'https://sd.qunliao.info/fastdfs3/M00/B5/80/ChOxM1xC2UyAFIQpAAAJFbiniWQ532.png','3'],
       ['韩国', 'https://sd.qunliao.info/fastdfs3/M00/B5/7A/ChOxM1xC2MSAQaWAAAAL1VFSq5U098.png','4']
     ],
+  },
+  switchtoschedule:function(e){
+    let that = this;
+    this.setData({
+      nowgroup:false,
+      corrent:0
+    }),
+    wx.request({
+      url: that.data.urls[that.data.corrent],
+      data:{},
+      success: function(res) {
+        that.setData({
+          schedule:res.data.content.matches
+        });
+        console.log(that.data.schedule);
+      }
+    })
+  },
+  switchtogroup:function(e){
+    this.setData({
+      nowgroup:true
+    })
+  },
+  goahead:function(e){
+    let that = this;
+    const operation=e.currentTarget.dataset.operation;
+    this.setData({
+      corrent:that.data.corrent+Number(operation)
+  }),
+  wx.request({
+    url: that.data.urls[that.data.corrent],
+    data:{},
+    success: function(res) {
+      that.setData({
+        schedule:res.data.content.matches
+      });
+      console.log(that.data.schedule);
+    }
+  })
   }
 })

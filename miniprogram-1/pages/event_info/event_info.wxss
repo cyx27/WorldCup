@@ -4,12 +4,6 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: gainsboro;
 }
-.time {
-  display: flex;
-  flex-direction: column;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  background-color:rgb(237, 237, 243);
-}
 .flag {
 
   height: 50rpx;
@@ -50,4 +44,67 @@
 }
 page {
   background-color: rgb(250, 249, 249);
+}
+.topbarfather{
+  position: relative;
+  background-color: #ffffff;
+  width: 100%;
+  height: 50rpx;
+}
+.topbar{
+  position: absolute;
+  width: 50%;
+  height: 50rpx;
+  font-size: 35rpx;
+  text-align: center;
+  color: gainsboro;
+}
+.scheduletit{
+  width: 100%;
+  height: 100rpx;
+  background: #16b13a;
+  color: #fff;
+  text-align: center;
+  font-size: 32rpx;
+  position: relative;
+}
+.next{
+  position: absolute;
+  right: 40rpx;
+  top: 25%;
+}
+.head{
+  position: absolute;
+  left: 40rpx;
+  top: 25%;
+}
+.whitebar{
+  width: 100%;
+  position: relative;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #fffefe;
+  display: flex;
+}
+.greybar{
+  width: 100%;
+  position: relative;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #f7f7f7;
+  display: flex;
+}
+.time{
+  position:absolute;
+  font-size: 30rpx;
+  left:5%;
+  width: 40%;
+}
+.teamname{
+  font-size: 28rpx;
+  position:absolute;
+}
+.pick{
+  color:black;
+  border-bottom:3rpx solid black;
 }
