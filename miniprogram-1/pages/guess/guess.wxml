@@ -1,0 +1,48 @@
+<view wx:if="{{huab==true}}">
+    <canvas canvasId="canvas" style="width:{{imageWidth}}px;height:1320.2rpx;position:absolute;z-index: 5;"></canvas>
+</view>
+<image src="../../image/bag.jpg" style="width:{{imageWidth}}px;height:1320.2rpx;position:absolute;z-index: 0;"></image>
+<view style="width:{{imageWidth}}px;height:1320.2rpx;position:absolute;z-index: 1;top:{{wid1}}px;right:20rpx;">
+    <view style="width:{{imageHeight}}px;height:{{imageWidth}}px;transform: rotate(90deg);transform-origin:0% 100%;">
+        <text style="width:100rpx;height:50rpx;font-weight:bold;text-align: center;line-height:70rpx;font-size: 25rpx;color:#fff;position:absolute;z-index: 1;left:190rpx;">1/4决赛</text>
+        <text style="width:100rpx;height:50rpx;font-weight:bold;text-align: center;line-height:70rpx;font-size: 25rpx;color:#fff;position:absolute;z-index: 1;left:850rpx;">1/4决赛</text>
+        <text style="width:100rpx;height:50rpx;font-weight:bold;text-align: center;line-height:70rpx;font-size: 25rpx;color:#fff;position:absolute;z-index: 1;left:350rpx;top:85rpx;">1/2决赛</text>
+        <text style="width:100rpx;height:50rpx;font-weight:bold;text-align: center;line-height:70rpx;font-size: 25rpx;color:#fff;position:absolute;z-index: 1;left:700rpx;top:85rpx;">1/2决赛</text>
+        <text style="width:100rpx;height:50rpx;font-weight:bold;text-align: center;line-height:70rpx;font-size: 25rpx;color:#fff;position:absolute;z-index: 1;left:420rpx;top:265rpx;">决赛</text>
+        <text style="width:100rpx;height:50rpx;font-weight:bold;text-align: center;line-height:70rpx;font-size: 25rpx;color:#fff;position:absolute;z-index: 1;left:630rpx;top:265rpx;">决赛</text>
+        <image src="../../image/bag1.png" style="width:1125.2rpx;height:686rpx;position:absolute;z-index: 0;left:10rpx;top:10rpx;"></image>
+        <image bindtap="butt" id="1" src="{{q16[1]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:10rpx;top:10rpx;"></image>
+        <image bindtap="butt" id="2" src="{{q16[2]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:10rpx;top:100rpx;"></image>
+        <image bindtap="butt" id="3" src="{{q16[3]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:10rpx;top:190rpx;"></image>
+        <image bindtap="butt" id="4" src="{{q16[4]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:10rpx;top:280rpx;"></image>
+        <image bindtap="butt" id="5" src="{{q16[5]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:10rpx;top:370rpx;"></image>
+        <image bindtap="butt" id="6" src="{{q16[6]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:10rpx;top:460rpx;"></image>
+        <image bindtap="butt" id="7" src="{{q16[7]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:10rpx;top:550rpx;"></image>
+        <image bindtap="butt" id="8" src="{{q16[8]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:10rpx;top:640rpx;"></image>
+        <image bindtap="butt1" id="11" src="{{q8[0]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:180rpx;top:55rpx;"></image>
+        <image bindtap="butt1" id="12" src="{{q8[1]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:180rpx;top:235rpx;"></image>
+        <image bindtap="butt1" id="13" src="{{q8[2]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:180rpx;top:415rpx;"></image>
+        <image bindtap="butt1" id="14" src="{{q8[3]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:180rpx;top:595rpx;"></image>
+        <image bindtap="butt2" id="21" src="{{q4[0]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:340rpx;top:145rpx;"></image>
+        <image bindtap="butt2" id="22" src="{{q4[1]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:340rpx;top:505rpx;"></image>
+        <image bindtap="butt3" id="31" src="{{q2[0]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:360rpx;top:320rpx;"></image>
+        <image src="{{q1}}" style="width:115.2rpx;height:56rpx;position:absolute;z-index: 1;left:520rpx;top:320rpx;font-size: 35rpx;text-align: center;line-height:90rpx;"></image>
+        <image src="../../image/dali.png" style="width:89rpx;height:178.5rpx;position:absolute;z-index: 2;left:533rpx;top:110rpx;"></image>
+        <button style="width:300rpx;height:80rpx;position:absolute;z-index: 2;left:430rpx;top:600rpx;text-align: center;line-height:80rpx;font-size: 30rpx;" wx:if="{{tanc==true}}">完成</button>
+        <image bindtap="butt3" id="32" src="{{q2[1]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:680rpx;top:320rpx;"></image>
+        <image bindtap="butt2" id="23" src="{{q4[2]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:700rpx;top:145rpx;"></image>
+        <image bindtap="butt2" id="24" src="{{q4[3]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:700rpx;top:505rpx;"></image>
+        <image bindtap="butt1" id="15" src="{{q8[4]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:860rpx;top:55rpx;"></image>
+        <image bindtap="butt1" id="16" src="{{q8[5]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:860rpx;top:235rpx;"></image>
+        <image bindtap="butt1" id="17" src="{{q8[6]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:860rpx;top:415rpx;"></image>
+        <image bindtap="butt1" id="18" src="{{q8[7]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:860rpx;top:595rpx;"></image>
+        <image bindtap="butt" id="9" src="{{q16[9]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:1020rpx;top:10rpx;"></image>
+        <image bindtap="butt" id="10" src="{{q16[10]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:1020rpx;top:100rpx;"></image>
+        <image bindtap="butt" id="11" src="{{q16[11]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:1020rpx;top:190rpx;"></image>
+        <image bindtap="butt" id="12" src="{{q16[12]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:1020rpx;top:280rpx;"></image>
+        <image bindtap="butt" id="13" src="{{q16[13]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:1020rpx;top:370rpx;"></image>
+        <image bindtap="butt" id="14" src="{{q16[14]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:1020rpx;top:460rpx;"></image>
+        <image bindtap="butt" id="15" src="{{q16[15]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:1020rpx;top:550rpx;"></image>
+        <image bindtap="butt" id="16" src="{{q16[16]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:1020rpx;top:640rpx;"></image>
+    </view>
+</view>

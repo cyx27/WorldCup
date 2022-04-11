@@ -1,13 +1,41 @@
-
-<view class="weui-cells weui-cells_after-title">
-  <view class="weui-cell weui-cell_active">
-       <view class="weui-cell__bd">
-            <input class="weui-textarea" placeholder-class="weui-input__placeholder" placeholder="0" style="height: 3.3em;" bindinput="handleinput"/>
-            <view aria-role="option" title="字数统计" class="weui-textarea-counter">{{num}}/200</view>
-       </view>
-  </view>
-</view>
-<button bindtap="handletap" data-operation="{{1}}" >+</button>
-<button bindtap="handletap" data-operation="{{-1}}">-</button>
-<view>----------------------</view>
-<view>{{num}}</view>
+<checkbox-group bindchange="checkboxChangeA">
+    <label class="checkbox" wx:for-items="{{itemsA}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+</checkbox-group>
+<checkbox-group bindchange="checkboxChangeB">
+    <label class="checkbox" wx:for-items="{{itemsB}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+</checkbox-group>
+<checkbox-group bindchange="checkboxChangeC">
+    <label class="checkbox" wx:for-items="{{itemsC}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+</checkbox-group>
+<checkbox-group bindchange="checkboxChangeD">
+    <label class="checkbox" wx:for-items="{{itemsD}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+</checkbox-group>
+<checkbox-group bindchange="checkboxChangeE">
+    <label class="checkbox" wx:for-items="{{itemsE}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+</checkbox-group>
+<checkbox-group bindchange="checkboxChangeF">
+    <label class="checkbox" wx:for-items="{{itemsF}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+</checkbox-group>
+<checkbox-group bindchange="checkboxChangeG">
+    <label class="checkbox" wx:for-items="{{itemsG}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+</checkbox-group>
+<checkbox-group bindchange="checkboxChangeH">
+    <label class="checkbox" wx:for-items="{{itemsH}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+</checkbox-group>
+<button bindtap="post">选择完成</button>

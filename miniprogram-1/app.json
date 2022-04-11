@@ -5,7 +5,8 @@
         "pages/event_info/event_info",
         "pages/game/game",
         "pages/team_info/team_info",
-        "pages/schedule/schedule"
+        "pages/schedule/schedule",
+        "pages/guess/guess"
     ],
     "tabBar": {
         "color": "#333",
