@@ -58,50 +58,238 @@ Page({
       chuxianH:[],
     },
     checkboxChangeA: function(e) {
+      var items=this.data.itemsA, values=e.detail.value;
+      for(var i=0,lenI=items.length;i<lenI;++i){
+        items[i].checked = false;
+        for(var j=0,lenJ=values.length;j<lenJ;++j){
+          if(values.length>2){
+            wx.showModal({
+              title: "警告",
+              content: "最多选择两个",
+              showCancel: !1,
+              success: function(t) {
+                  t.confirm;
+              }
+            });
+            values.shift(values[0]);
+          }
+          if(items[i].name==values[j]){
+            items[i].checked=true;
+            break
+          }
+        }
+      }
       this.setData({
-          chuxianA: e.detail.value
+        itemsA: items,
+        chuxianA: values
       })
     },
+    
     checkboxChangeB: function(e) {
-        this.setData({
-            chuxianB: e.detail.value
-        })
+      var items=this.data.itemsB, values=e.detail.value;
+      for(var i=0,lenI=items.length;i<lenI;++i){
+        items[i].checked = false;
+        for(var j=0,lenJ=values.length;j<lenJ;++j){
+          if(values.length>2){
+            wx.showModal({
+              title: "警告",
+              content: "最多选择两个",
+              showCancel: !1,
+              success: function(t) {
+                  t.confirm;
+              }
+            });
+            values.shift(values[0]);
+          }
+          if(items[i].name==values[j]){
+            items[i].checked=true;
+            break
+          }
+        }
+      }
+      this.setData({
+        itemsB: items,
+        chuxianB: values
+      })
       },
       checkboxChangeC: function(e) {
+        var items=this.data.itemsC, values=e.detail.value;
+        for(var i=0,lenI=items.length;i<lenI;++i){
+          items[i].checked = false;
+          for(var j=0,lenJ=values.length;j<lenJ;++j){
+            if(values.length>2){
+              wx.showModal({
+                title: "警告",
+                content: "最多选择两个",
+                showCancel: !1,
+                success: function(t) {
+                    t.confirm;
+                }
+              });
+              values.shift(values[0]);
+            }
+            if(items[i].name==values[j]){
+              items[i].checked=true;
+              break
+            }
+          }
+        }
         this.setData({
-            chuxianC: e.detail.value
+          itemsC: items,
+          chuxianC: values
         })
       },
       checkboxChangeD: function(e) {
+        var items=this.data.itemsD, values=e.detail.value;
+        for(var i=0,lenI=items.length;i<lenI;++i){
+          items[i].checked = false;
+          for(var j=0,lenJ=values.length;j<lenJ;++j){
+            if(values.length>2){
+              wx.showModal({
+                title: "警告",
+                content: "最多选择两个",
+                showCancel: !1,
+                success: function(t) {
+                    t.confirm;
+                }
+              });
+              values.shift(values[0]);
+            }
+            if(items[i].name==values[j]){
+              items[i].checked=true;
+              break
+            }
+          }
+        }
         this.setData({
-            chuxianD: e.detail.value
+          itemsD: items,
+          chuxianD: values
         })
       },
       checkboxChangeE: function(e) {
+        var items=this.data.itemsE, values=e.detail.value;
+        for(var i=0,lenI=items.length;i<lenI;++i){
+          items[i].checked = false;
+          for(var j=0,lenJ=values.length;j<lenJ;++j){
+            if(values.length>2){
+              wx.showModal({
+                title: "警告",
+                content: "最多选择两个",
+                showCancel: !1,
+                success: function(t) {
+                    t.confirm;
+                }
+              });
+              values.shift(values[0]);
+            }
+            if(items[i].name==values[j]){
+              items[i].checked=true;
+              break
+            }
+          }
+        }
         this.setData({
-            chuxianE: e.detail.value
+          itemsE: items,
+          chuxianE: values
         })
       },
       checkboxChangeF: function(e) {
+        var items=this.data.itemsF, values=e.detail.value;
+        for(var i=0,lenI=items.length;i<lenI;++i){
+          items[i].checked = false;
+          for(var j=0,lenJ=values.length;j<lenJ;++j){
+            if(values.length>2){
+              wx.showModal({
+                title: "警告",
+                content: "最多选择两个",
+                showCancel: !1,
+                success: function(t) {
+                    t.confirm;
+                }
+              });
+              values.shift(values[0]);
+            }
+            if(items[i].name==values[j]){
+              items[i].checked=true;
+              break
+            }
+          }
+        }
         this.setData({
-            chuxianF: e.detail.value
+          itemsF: items,
+          chuxianF: values
         })
       },
       checkboxChangeG: function(e) {
+        var items=this.data.itemsG, values=e.detail.value;
+        for(var i=0,lenI=items.length;i<lenI;++i){
+          items[i].checked = false;
+          for(var j=0,lenJ=values.length;j<lenJ;++j){
+            if(values.length>2){
+              wx.showModal({
+                title: "警告",
+                content: "最多选择两个",
+                showCancel: !1,
+                success: function(t) {
+                    t.confirm;
+                }
+              });
+              values.shift(values[0]);
+            }
+            if(items[i].name==values[j]){
+              items[i].checked=true;
+              break
+            }
+          }
+        }
         this.setData({
-            chuxianG: e.detail.value
+          itemsG: items,
+          chuxianG: values
         })
       },
       checkboxChangeH: function(e) {
+        var items=this.data.itemsH, values=e.detail.value;
+        for(var i=0,lenI=items.length;i<lenI;++i){
+          items[i].checked = false;
+          for(var j=0,lenJ=values.length;j<lenJ;++j){
+            if(values.length>2){
+              wx.showModal({
+                title: "警告",
+                content: "最多选择两个",
+                showCancel: !1,
+                success: function(t) {
+                    t.confirm;
+                }
+              });
+              values.shift(values[0]);
+            }
+            if(items[i].name==values[j]){
+              items[i].checked=true;
+              break
+            }
+          }
+        }
         this.setData({
-            chuxianH: e.detail.value
+          itemsH: items,
+          chuxianH: values
         })
       },
     post: function(e) {
+      if(this.data.chuxianA.length<2||this.data.chuxianB.length<2||this.data.chuxianC.length<2||this.data.chuxianD.length<2||this.data.chuxianE.length<2||this.data.chuxianF.length<2||this.data.chuxianG.length<2||this.data.chuxianH.length<2){
+        wx.showModal({
+          title: "提示",
+          content: "请继续选择",
+          showCancel: !1,
+          success: function(t) {
+              t.confirm;
+          }
+        });
+      }else{
         let toPost="A="+this.data.chuxianA.join("")+"&B="+this.data.chuxianB.join("")+"&C="+this.data.chuxianC.join("")+"&D="+this.data.chuxianD.join("")+"&E="+this.data.chuxianE.join("")+"&F="+this.data.chuxianF.join("")+"&G="+this.data.chuxianG.join("")+"&H="+this.data.chuxianH.join("")
         console.log(toPost)
         wx.navigateTo({
           url: '/pages/guess/guess?'+toPost,
         })
     }
+  }
   })

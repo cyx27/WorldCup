@@ -1,8 +1,9 @@
 <checkbox-group bindchange="checkboxChangeA">
     <label class="checkbox" wx:for-items="{{itemsA}}">
-        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+        <checkbox value="{{item.name}}" checked="{{item.checked}}" bindtap="changeBeforeA"/>{{item.value}}
     </label>
 </checkbox-group>
+
 <checkbox-group bindchange="checkboxChangeB">
     <label class="checkbox" wx:for-items="{{itemsB}}">
         <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
