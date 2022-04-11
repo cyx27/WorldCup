@@ -12,6 +12,29 @@ swiper{
     background: #EBECED;
     display:flex;
   }
+  .start{
+    position: relative;
+    width: 100%;
+    height: 200rpx;
+    background: #888888;
+    text-align: center;
+    font-size: 40rpx;
+    color: #ffffff;
+    margin: 0;
+  }
+  .background{
+    background: #f7f7f7;
+    width: 100%;
+    font-size: 40rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .start image{
+    width: 160rpx;
+    height: 130rpx;
+
+  }
   .item1{
     width: 120rpx;
     height: 60rpx;
@@ -31,6 +54,7 @@ swiper{
     width: 100%;
     height: 80rpx;
     background: #f7f7f7;
+    border-left: 3px solid #16b13a;
   }
   .text{
     position: absolute;
