@@ -24,10 +24,20 @@
   background-color: rgb(221, 219, 219);
 }
 
-.checkbox{
-  zoom:85%;
-  width:25%;
+/* 按钮未选中 */
+.normal_button{
+    background: white;
 }
+  /* 小组第一 */
+.rank_first{
+    background: rgb(255, 196, 2);
+    color: white ;
+  }  
+  /* 小组第二 */
+.rank_second{
+    background: rgb(12, 209, 223);
+    color: white ;
+  }  
 
 .rule{
   background-color: rgb(221, 219, 219);

@@ -1,79 +1,101 @@
 <view class="title" >预测夺冠之路</view>
-<view class="rule">规则：每个小组预测两个球队从小组出线，第一个被选中的即小组第一，第二个被选中的即小组第二。</view>
+<view class="rule">规则：每个小组预测两个球队从小组出线，先选的<text style="color: rgb(255, 196, 2);">金色</text>代表小组第一，后选的<text style="color: rgb(12, 209, 223);">蓝色</text>代表小组第二。</view>
 
 <view class="group">A组</view>
-<checkbox-group bindchange="checkboxChangeA">
-    <view class="box">
+<view>
+    <view class="box" >
         <label class="checkbox" wx:for-items="{{itemsA}}">
-        <checkbox value="{{item.name}}" checked="{{item.checked}}" bindtap="changeBeforeA"/>{{item.value}}
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeA" data-name='{{item.name}}'>{{item.value}}
+        </button>            
+        <button wx:else class="normal_button" bindtap="checkboxChangeA" data-name='{{item.name}}'>{{item.value}}
+        </button>
         </label>
     </view>
-</checkbox-group>
+</view>
 
 
 <view class="group">B组</view>
-<checkbox-group bindchange="checkboxChangeB">
-    <view class="box">
+<view>
+    <view class="box" >
         <label class="checkbox" wx:for-items="{{itemsB}}">
-        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-    </label>
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeB" data-name='{{item.name}}'>{{item.value}}
+        </button>            
+        <button wx:else class="normal_button" bindtap="checkboxChangeB" data-name='{{item.name}}'>{{item.value}}
+        </button>
+        </label>
     </view>
-</checkbox-group>
+</view>
 
 <view class="group">C组</view>
-<checkbox-group bindchange="checkboxChangeC">
-    <view class="box">
+<view>
+    <view class="box" >
         <label class="checkbox" wx:for-items="{{itemsC}}">
-        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-    </label>
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeC" data-name='{{item.name}}'>{{item.value}}
+        </button>            
+        <button wx:else class="normal_button" bindtap="checkboxChangeC" data-name='{{item.name}}'>{{item.value}}
+        </button>
+        </label>
     </view>
-   
-</checkbox-group>
+</view>
 
 <view class="group">D组</view>
-<checkbox-group bindchange="checkboxChangeD">
-    <view class="box">
-    <label class="checkbox" wx:for-items="{{itemsD}}">
-        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-    </label>
+<view>
+    <view class="box" >
+        <label class="checkbox" wx:for-items="{{itemsD}}">
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeD" data-name='{{item.name}}'>{{item.value}}
+        </button>            
+        <button wx:else class="normal_button" bindtap="checkboxChangeD" data-name='{{item.name}}'>{{item.value}}
+        </button>
+        </label>
     </view>
-</checkbox-group>
+</view>
 
 <view class="group">E组</view>
-<checkbox-group bindchange="checkboxChangeE">
-    <view class="box">
-    <label class="checkbox" wx:for-items="{{itemsE}}">
-        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-    </label>
+<view>
+    <view class="box" >
+        <label class="checkbox" wx:for-items="{{itemsE}}">
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeE" data-name='{{item.name}}'>{{item.value}}
+        </button>            
+        <button wx:else class="normal_button" bindtap="checkboxChangeE" data-name='{{item.name}}'>{{item.value}}
+        </button>
+        </label>
     </view>
-</checkbox-group>
+</view>
 
 <view class="group">F组</view>
-<checkbox-group bindchange="checkboxChangeF">
-    <view class="box">
-    <label class="checkbox" wx:for-items="{{itemsF}}">
-        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-    </label>
+<view>
+    <view class="box" >
+        <label class="checkbox" wx:for-items="{{itemsF}}">
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeF" data-name='{{item.name}}'>{{item.value}}
+        </button>            
+        <button wx:else class="normal_button" bindtap="checkboxChangeF" data-name='{{item.name}}'>{{item.value}}
+        </button>
+        </label>
     </view>
-</checkbox-group>
-
+</view>
 <view class="group">G组</view>
-<checkbox-group bindchange="checkboxChangeG">
-    <view class="box">
-    <label class="checkbox" wx:for-items="{{itemsG}}">
-        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-    </label>
+<view>
+    <view class="box" >
+        <label class="checkbox" wx:for-items="{{itemsG}}">
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeG" data-name='{{item.name}}'>{{item.value}}
+        </button>            
+        <button wx:else class="normal_button" bindtap="checkboxChangeG" data-name='{{item.name}}'>{{item.value}}
+        </button>
+        </label>
     </view>
-</checkbox-group>
+</view>
 
 <view class="group">H组</view>
-<checkbox-group bindchange="checkboxChangeH">
-    <view class="box">
-    <label class="checkbox" wx:for-items="{{itemsH}}">
-        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-    </label>
+<view>
+    <view class="box" >
+        <label class="checkbox" wx:for-items="{{itemsH}}">
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeH" data-name='{{item.name}}'>{{item.value}}
+        </button>            
+        <button wx:else class="normal_button" bindtap="checkboxChangeH" data-name='{{item.name}}'>{{item.value}}
+        </button>
+        </label>
     </view>
-</checkbox-group>
+</view>
 
 
 <button class="button-contain" bindtap="post">选择完成</button>

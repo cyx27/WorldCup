@@ -1,9 +1,2 @@
 <!--index.wxml-->
 首页
-<input class="weui-textarea" placeholder-class="weui-input__placeholder" placeholder="卡塔尔" style="height: 3.3em;" bindinput="handleinput"/>
-<button bindtap="handletap">调用</button>
-<view wx:for="{{player}}" wx:for-item="pro" wx:key="idx">
-  <view>--------------------------------</view>
-  {{index}}
-  <view wx:for="{{pro}}" wx:key="key" wx:for-item="item"> {{index}} {{item}}</view>
-</view>
