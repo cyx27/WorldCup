@@ -54,5 +54,16 @@
   background: #45b97c;
   color: white;
 }
+.flag {
+  height: 50rpx;
+  width: 50rpx;
+  align-items:center; 
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
 

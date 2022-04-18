@@ -5,22 +5,37 @@
 <view>
     <view class="box" >
         <label class="checkbox" wx:for-items="{{itemsA}}">
-        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeA" data-name='{{item.name}}'>{{item.value}}
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeA" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>
         </button>            
-        <button wx:else class="normal_button" bindtap="checkboxChangeA" data-name='{{item.name}}'>{{item.value}}
+        <button wx:else class="normal_button" bindtap="checkboxChangeA" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>
         </button>
         </label>
     </view>
 </view>
 
-
 <view class="group">B组</view>
 <view>
     <view class="box" >
         <label class="checkbox" wx:for-items="{{itemsB}}">
-        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeB" data-name='{{item.name}}'>{{item.value}}
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeB" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>    
         </button>            
-        <button wx:else class="normal_button" bindtap="checkboxChangeB" data-name='{{item.name}}'>{{item.value}}
+        <button wx:else class="normal_button" bindtap="checkboxChangeB" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>    
         </button>
         </label>
     </view>
@@ -30,9 +45,17 @@
 <view>
     <view class="box" >
         <label class="checkbox" wx:for-items="{{itemsC}}">
-        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeC" data-name='{{item.name}}'>{{item.value}}
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeC" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>
         </button>            
-        <button wx:else class="normal_button" bindtap="checkboxChangeC" data-name='{{item.name}}'>{{item.value}}
+        <button wx:else class="normal_button" bindtap="checkboxChangeC" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>
         </button>
         </label>
     </view>
@@ -42,9 +65,17 @@
 <view>
     <view class="box" >
         <label class="checkbox" wx:for-items="{{itemsD}}">
-        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeD" data-name='{{item.name}}'>{{item.value}}
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeD" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>
         </button>            
-        <button wx:else class="normal_button" bindtap="checkboxChangeD" data-name='{{item.name}}'>{{item.value}}
+        <button wx:else class="normal_button" bindtap="checkboxChangeD" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>
         </button>
         </label>
     </view>
@@ -54,9 +85,17 @@
 <view>
     <view class="box" >
         <label class="checkbox" wx:for-items="{{itemsE}}">
-        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeE" data-name='{{item.name}}'>{{item.value}}
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeE" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>
         </button>            
-        <button wx:else class="normal_button" bindtap="checkboxChangeE" data-name='{{item.name}}'>{{item.value}}
+        <button wx:else class="normal_button" bindtap="checkboxChangeE" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>
         </button>
         </label>
     </view>
@@ -66,9 +105,17 @@
 <view>
     <view class="box" >
         <label class="checkbox" wx:for-items="{{itemsF}}">
-        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeF" data-name='{{item.name}}'>{{item.value}}
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeF" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>
         </button>            
-        <button wx:else class="normal_button" bindtap="checkboxChangeF" data-name='{{item.name}}'>{{item.value}}
+        <button wx:else class="normal_button" bindtap="checkboxChangeF" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>
         </button>
         </label>
     </view>
@@ -77,9 +124,17 @@
 <view>
     <view class="box" >
         <label class="checkbox" wx:for-items="{{itemsG}}">
-        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeG" data-name='{{item.name}}'>{{item.value}}
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeG" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>
         </button>            
-        <button wx:else class="normal_button" bindtap="checkboxChangeG" data-name='{{item.name}}'>{{item.value}}
+        <button wx:else class="normal_button" bindtap="checkboxChangeG" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>
         </button>
         </label>
     </view>
@@ -89,9 +144,17 @@
 <view>
     <view class="box" >
         <label class="checkbox" wx:for-items="{{itemsH}}">
-        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeH" data-name='{{item.name}}'>{{item.value}}
+        <button  wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeH" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>
         </button>            
-        <button wx:else class="normal_button" bindtap="checkboxChangeH" data-name='{{item.name}}'>{{item.value}}
+        <button wx:else class="normal_button" bindtap="checkboxChangeH" data-name='{{item.name}}'>
+            <view class="content">
+                <image src="{{item.url}}" class="flag"></image>
+                <text decode="{{true}}">&nbsp;{{item.value}}</text>
+            </view>
         </button>
         </label>
     </view>

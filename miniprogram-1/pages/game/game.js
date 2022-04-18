@@ -2,52 +2,52 @@ Page({
     data: {
         zero: 0,
       itemsA: [
-        {name: '1', value: '卡塔尔'},
-        {name: '2', value: '厄瓜多尔'},
-        {name: '3', value: '塞内加尔'},
-        {name: '4', value: '荷兰'}
+        {name: '1', value: '卡塔尔', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7C/ChOxM1xC2PyAX4i0AAAJXV6GRFw977.png'},
+        {name: '2', value: '厄瓜多尔', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/75/ChOxM1xC2FSADy_DAAALaURezqo279.png'},
+        {name: '3', value: '塞内加尔', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7D/ChOxM1xC2RKAS3NNAAAC2Nr8OzA389.png'},
+        {name: '4', value: '荷兰', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7B/ChOxM1xC2N6AEWYMAAABPByVIVM465.png'}
       ],
       itemsB: [
-        {name: '1', value: '英格兰'},
-        {name: '2', value: '伊朗'},
-        {name: '3', value: '美国'},
-        {name: '4', value: '威尔士'}
+        {name: '1', value: '英格兰', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/76/ChOxM1xC2G2Acp31AAABNMvdP0U855.png'},
+        {name: '2', value: '伊朗', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/78/ChOxM1xC2KGAIsqKAAAVUXXXPL0755.png'},
+        {name: '3', value: '美国', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7F/ChOxM1xC2UmAAa6sAAAQEZEKYAA997.png'},
+        {name: '4', value: '威尔士', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/80/ChOxM1xC2VGAYhOTAAAbZ1CFkQg735.png'}
       ],
       itemsC: [
-        {name: '1', value: '阿根廷'},
-        {name: '2', value: '沙特阿拉伯'},
-        {name: '3', value: '墨西哥'},
-        {name: '4', value: '波兰'}
+        {name: '1', value: '阿根廷', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/72/ChOxM1xC2A-AI_uOAAAHB-5pMAU501.png'},
+        {name: '2', value: '沙特阿拉伯', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7D/ChOxM1xC2QmAWthoAAAKQAUuoQY168.png'},
+        {name: '3', value: '墨西哥', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7A/ChOxM1xC2NOAIENZAAAIVenmXhE159.png'},
+        {name: '4', value: '波兰', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7C/ChOxM1xC2PGALY-zAAAAqYWqc08697.png'}
       ],
       itemsD: [
-        {name: '1', value: '法国'},
-        {name: '2', value: '秘鲁'},
-        {name: '3', value: '丹麦'},
-        {name: '4', value: '突尼斯'}
+        {name: '1', value: '法国', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/77/ChOxM1xC2IKANG6tAAABFW9OqCQ523.png'},
+        {name: '2', value: '秘鲁', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7B/ChOxM1xC2OyAMboLAAAE67UTWH4126.png'},
+        {name: '3', value: '丹麦', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/75/ChOxM1xC2FGAU4XgAAABUo4hnUQ558.png'},
+        {name: '4', value: '突尼斯', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7F/ChOxM1xC2T6AVxyuAAAF5xZKmyM136.png'}
       ],
       itemsE: [
-        {name: '1', value: '西班牙'},
-        {name: '2', value: '哥斯达黎加'},
-        {name: '3', value: '德国'},
-        {name: '4', value: '日本'}
+        {name: '1', value: '西班牙', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7E/ChOxM1xC2TCAWMemAAAJsy8Pgbg246.png'},
+        {name: '2', value: '哥斯达黎加',url: 'https://sd.qunliao.info/fastdfs3/M00/B5/74/ChOxM1xC2EKAaFLCAAAGgA8WOkI815.png'},
+        {name: '3', value: '德国', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/77/ChOxM1xC2JGAd79VAAAAyGVvoVQ975.png'},
+        {name: '4', value: '日本', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/79/ChOxM1xC2L6AHvC4AAAEdawnP9Q689.png'}
       ],
       itemsF: [
-        {name: '1', value: '比利时'},
-        {name: '2', value: '加拿大'},
-        {name: '3', value: '摩洛哥'},
-        {name: '4', value: '克罗地亚'}
+        {name: '1', value: '比利时', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/72/ChOxM1xC2CKAJTG3AAAAypTh1A8948.png'},
+        {name: '2', value: '加拿大', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/73/ChOxM1xC2DSAay2bAAAF1Vkv5Qg286.png'},
+        {name: '3', value: '摩洛哥', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7A/ChOxM1xC2NWAZiM1AAADL6R9t6s156.png'},
+        {name: '4', value: '克罗地亚', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/74/ChOxM1xC2EOAbUHIAAAOg6JpgzM729.png'}
       ],
       itemsG: [
-        {name: '1', value: '巴西'},
-        {name: '2', value: '塞尔维亚'},
-        {name: '3', value: '瑞士'},
-        {name: '4', value: '喀麦隆'}
+        {name: '1', value: '巴西', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/73/ChOxM1xC2DCAM4slAAAMODYb5Wo093.png'},
+        {name: '2', value: '塞尔维亚', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/87/ChOxM1xC2iSAWoJLAAANi61d2EA772.png'},
+        {name: '3', value: '瑞士', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7F/ChOxM1xC2TyANIAKAAABeUfO5gM520.png'},
+        {name: '4', value: '喀麦隆', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/73/ChOxM1xC2DOANFruAAAC0MdXvjY313.png'}
       ],
       itemsH: [
-        {name: '1', value: '葡萄牙'},
-        {name: '2', value: '加纳'},
-        {name: '3', value: '乌拉圭'},
-        {name: '4', value: '韩国'}
+        {name: '1', value: '葡萄牙', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7C/ChOxM1xC2PuALvwRAAAK3F_koeE108.png'},
+        {name: '2', value: '加纳', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/77/ChOxM1xC2JGASs2QAAAEP6RcnSU543.png'},
+        {name: '3', value: '乌拉圭', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/80/ChOxM1xC2UyAFIQpAAAJFbiniWQ532.png'},
+        {name: '4', value: '韩国', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7A/ChOxM1xC2MSAQaWAAAAL1VFSq5U098.png'}
       ],
       chuxianA:[],
       chuxianB:[],
