@@ -257,7 +257,7 @@ Page({
                 });break;
             case "4":
                 this.setData({
-                    ['q16[11]']: "https://sd.qunliao.info/fastdfs3/M00/B5/79/ChOxM1xC2L6AHvC4AAAEdawnP9Q689.png"
+                    ['q16[5]']: "https://sd.qunliao.info/fastdfs3/M00/B5/79/ChOxM1xC2L6AHvC4AAAEdawnP9Q689.png"
                 });break;
         }
         switch(e.E[1]){
