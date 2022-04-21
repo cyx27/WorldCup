@@ -21,12 +21,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
   line-height: 80rpx;
-  background-color: rgb(221, 219, 219);
+  background-color: white;
 }
+
+
 
 /* 按钮未选中 */
 .normal_button{
-    background: white;
+    background: rgb(221, 219, 219);
 }
   /* 小组第一 */
 .rank_first{
