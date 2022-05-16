@@ -6,7 +6,8 @@
         "pages/game/game",
         "pages/team_info/team_info",
         "pages/schedule/schedule",
-        "pages/guess/guess"
+        "pages/guess/guess",
+        "pages/votelist/votelist"
     ],
     "tabBar": {
         "color": "#333",
