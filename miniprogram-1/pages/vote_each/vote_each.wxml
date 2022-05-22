@@ -1,0 +1,31 @@
+<!--pages/vote_each/vote_each.wxml-->
+<view class="bg">
+    <view>
+        <image src="{{url}}" style="position: absolute;left:0;right:0;margin-left:auto;margin-right:auto;top: 5%; width: 30vw; height: 30vw;"></image>
+        <view style="width: 35vw; position: absolute;left:0;right:0;margin-left:auto;margin-right:auto;top: 20%; white-space: pre-wrap; font-weight: bold; font-size: larger"
+        class="center">{{name}}</view>
+        <view style="width: 35vw; position: absolute;left:0;right:0;margin-left:auto;margin-right:auto;top: 24%; white-space: pre-wrap; font-weight: bold; font-size: larger"
+        class="center">当前票数: {{vote}}</view>
+    </view>
+         
+    <view class="msg-box" style="position: absolute; top: 30%;">
+    <!--评论区-->
+        <view class="send-box">
+        <input value='{{inputVal}}' bindinput='changeInputVal' class="input" type="text" placeholder='我要发表助威词...' placeholder-class='place-input' />
+        <button size='mini' type="primary" bindtap='addMsg'>发表</button>
+        </view>
+        <text class="msg-info" wx:if="{{msgData.length==0}}">暂⽆人为{{name}}助威...^_^</text>   <!--当评论列表为空时显⽰本句--> 
+    <!--已有评论-->
+        <scroll-view scroll-y="true" class="list-view">
+            <view class="item" wx:for="{{msgData}}" wx:key="{{index}}"><!--循环显⽰msgData中的数据，key是必须的，否则会出现警告-->
+                <view style="display: flex; flex-direction: row;">   
+                    <image src="{{item[num3]}}" style="width: 10vw; height: 10vw; margin-top: 17rpx; left: 0;"></image>
+                    <view style="margin-left: 2vw;">
+                    <text style="flex-wrap: wrap; font-size: smaller">{{item[num2]}}
+                    {{item[num1]}}</text></view>
+                </view>
+                <view class="text1">{{item[num0]}}</view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

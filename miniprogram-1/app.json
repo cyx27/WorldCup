@@ -8,7 +8,8 @@
         "pages/team_info/team_info",
         "pages/schedule/schedule",
         "pages/guess/guess",
-        "pages/votelist/votelist"
+        "pages/votelist/votelist",
+        "pages/vote_each/vote_each"
     ],
     "tabBar": {
         "color": "#333",
