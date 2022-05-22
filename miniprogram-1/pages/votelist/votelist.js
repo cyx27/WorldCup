@@ -61,10 +61,12 @@ Page({
   },
 
   resetVote: function(){
+      let app = wx.getStorageSync('userInfo')
       wx.clearStorage({
         success: (res) => {},
       })
-        this.setVote()
+      wx.setStorageSync('userInfo', app)
+      this.setVote()
   },
   /**
    * 生命周期函数--监听页面加载
