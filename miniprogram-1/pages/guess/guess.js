@@ -98,6 +98,7 @@ Page({
         }), this.qux();
     },
     onLoad: function(e) {
+        console.log(e);
         switch(e.A[0]){
             case "1":
                 this.setData({

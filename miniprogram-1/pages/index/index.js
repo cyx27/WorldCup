@@ -36,6 +36,8 @@ Page({
     })
  },
 
+
+
  gotoindex(){
    wx.switchTab({
      url: '/pages/index/index',

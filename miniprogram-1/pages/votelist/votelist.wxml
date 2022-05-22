@@ -17,7 +17,7 @@
           <image src="{{item.url}}" mode="aspectFill" style="width: 20vw; height: 10vh;"></image>
         </view>
         <view>目前票数:{{q32[index].vote}}</view>
-        <button style="width: 18vw;height: 4vh; font-size: 25rpx;  padding-left: 40rpx;" bindtap="vote" data-name="{{item.name}}">投票</button>
+        <button style="width: 18vw;height: 4vh; font-size: 25rpx;  padding-left: 40rpx;" bindtap="vote" data-name="{{item.name}}" disabled="{{ userQ32[index]==1 }}" >投票</button>
       </view>
 
     </view>

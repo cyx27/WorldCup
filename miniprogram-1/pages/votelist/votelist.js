@@ -1,25 +1,47 @@
 // pages/votelist/votelist.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      q32: []
+      q32: [],
+      userQ32: []
   },
 
   vote: function(e) {
-    //   console.log(e)
-    //   console.log(e.currentTarget.dataset.name)
+    // console.log(e)
+    // console.log(e.currentTarget.dataset.name)
     let name = e.currentTarget.dataset.name
     let vote = "vote" + name
-      if(!wx.getStorageSync(vote)){
-          wx.setStorageSync(vote, 1)
-          this.setVote()
-      }else{
-          wx.setStorageSync(vote, wx.getStorageSync(vote)+1)
-          this.setVote()
-      }
+ 
+      wx.showModal({
+        title: '',
+        content: '是否确认选择？',
+        success: (res) =>{
+          if (res.confirm) {
+
+            this.data.userQ32[name-1] = 1;
+            wx.setStorageSync(app.globalData.userInfo.nickName,this.data.userQ32)
+            console.log(wx.getStorageSync(app.globalData.userInfo.nickName))
+            this.setData({
+              userQ32: this.data.userQ32
+            })
+
+            if(!wx.getStorageSync(vote)){
+              wx.setStorageSync(vote, 1)
+              this.setVote()
+            }else{
+              wx.setStorageSync(vote, wx.getStorageSync(vote)+1)
+              this.setVote()
+            }
+            console.log('用户点击确定')
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
   },
 
   setVote: function(){
@@ -81,9 +103,10 @@ Page({
             {name: '29', value: '葡萄牙', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7C/ChOxM1xC2PuALvwRAAAK3F_koeE108.png',vote: 0, comment:[]},
             {name: '30', value: '加纳', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/77/ChOxM1xC2JGASs2QAAAEP6RcnSU543.png',vote: 0, comment:[]},
             {name: '31', value: '乌拉圭', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/80/ChOxM1xC2UyAFIQpAAAJFbiniWQ532.png',vote: 0, comment:[]},
-            {name: '32', value: '韩国', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7A/ChOxM1xC2MSAQaWAAAAL1VFSq5U098.png',vote: 0, comment:[]}]
+            {name: '32', value: '韩国', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7A/ChOxM1xC2MSAQaWAAAAL1VFSq5U098.png',vote: 0, comment:[]}],
+          userQ32: wx.getStorageSync(app.globalData.userInfo.nickName)
       })
-      this.setVote();
+      this.setVote()
   },
 
   /**

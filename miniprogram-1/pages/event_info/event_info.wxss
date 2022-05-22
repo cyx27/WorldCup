@@ -27,7 +27,7 @@
  border-bottom-color: rgb(253, 253, 253);
  border-bottom-width: 4rpx;
  border-bottom-style: solid;
-}
+} 
 .content{
   display: flex;
   flex-direction: row;
