@@ -21,10 +21,13 @@
                 <view style="display: flex; flex-direction: row;">   
                     <image src="{{item[num3]}}" style="width: 10vw; height: 10vw; margin-top: 17rpx; left: 0;"></image>
                     <view style="margin-left: 2vw;">
-                    <text style="flex-wrap: wrap; font-size: smaller">{{item[num2]}}
+                    <text style="flex-wrap: wrap; font-size: smaller; ">{{item[num2]}}
                     {{item[num1]}}</text></view>
                 </view>
-                <view class="text1">{{item[num0]}}</view>
+                <view class="text1" style="word-break: break-all;">{{item[num0]}}</view>
+                <text style="float: right;margin-right: 4vw; font-size: smaller; color: white;">{{item[num4]}}</text>
+                <image wx:if="{{item[num4]==0}}" src="/image/点赞.png" style="height: 4vw; width: 4vw; float: right;margin-right: 1vw;" bindtap="thumpUp" data-time="{{item[num1]}}"></image>
+                <image wx:else src="/image/已点赞.png" style="height: 4vw; width: 4vw; float: right;margin-right: 1vw;"></image>
             </view>
         </scroll-view>
     </view>

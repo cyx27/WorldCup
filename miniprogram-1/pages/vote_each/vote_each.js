@@ -82,7 +82,23 @@ Page({
         let key = "comment"+this.data.id
         wx.setStorageSync(key, this.data.msgData)
     },
-    deleMsg(ev) {
+    thumpUp(e) {
+        let time = e.currentTarget.dataset.time
+        let newMsgData = []
+        for(let i=0;i<this.data.msgData.length;i++){
+            if(this.data.msgData[i][1] == time){
+                let temp = this.data.msgData[i]
+                temp[4] += 1
+                newMsgData.push(temp)
+            }else{
+                newMsgData.push(this.data.msgData[i])
+            }
+        }
+        this.setData({
+            msgData: newMsgData
+        })
+        let key = "comment"+this.data.id
+        wx.setStorageSync(key, this.data.msgData)
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
