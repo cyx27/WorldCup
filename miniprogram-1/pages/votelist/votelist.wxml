@@ -9,7 +9,7 @@
     <view style="height: 12vh; width: 20vw;"><image src="/image/medal-gold.png" style="height: 12vh; width: 20vw;"></image></view>
     <view style="height: 12vh; width: 20vw;"><image src="/image/medal-bronze.png" style="height: 12vh; width: 20vw;"></image></view>
   </view>
-    <button bindtap="resetVote" style="border: solid;">重置</button>
+    <!-- <button bindtap="resetVote" style="border: solid;">重置</button> -->
     <view class="list">
       <view class="box" wx:for-items="{{q32}}" wx:key="index" style="width: 22vw; height: 22vh; border: solid 2rpx; margin-top: 10rpx;">
         <navigator url="/pages/vote_each/vote_each?teamId={{item.name}}&teamName={{item.value}}&url={{item.url}}&vote={{item.vote}}">

@@ -19,14 +19,14 @@
         <scroll-view scroll-y="true" class="list-view">
             <view class="item" wx:for="{{msgData}}" wx:key="{{index}}"><!--循环显⽰msgData中的数据，key是必须的，否则会出现警告-->
                 <view style="display: flex; flex-direction: row;">   
-                    <image src="{{item[num3]}}" style="width: 10vw; height: 10vw; margin-top: 17rpx; left: 0;"></image>
+                    <image src="{{item['avatarUrl']}}" style="width: 10vw; height: 10vw; margin-top: 17rpx; left: 0;"></image>
                     <view style="margin-left: 2vw;">
-                    <text style="flex-wrap: wrap; font-size: smaller; ">{{item[num2]}}
-                    {{item[num1]}}</text></view>
+                    <text style="flex-wrap: wrap; font-size: smaller; ">{{item['nickName']}}
+                    {{item['postTime']}}</text></view>
                 </view>
-                <view class="text1" style="word-break: break-all;">{{item[num0]}}</view>
-                <text style="float: right;margin-right: 4vw; font-size: smaller; color: white;">{{item[num4]}}</text>
-                <image wx:if="{{item[num4]==0}}" src="/image/点赞.png" style="height: 4vw; width: 4vw; float: right;margin-right: 1vw;" bindtap="thumpUp" data-time="{{item[num1]}}"></image>
+                <view class="text1" style="word-break: break-all;">{{item['content']}}</view>
+                <text style="float: right;margin-right: 4vw; font-size: smaller; color: white;">{{item['likes']}}</text>
+                <image wx:if="{{item['likes']==0}}" src="/image/点赞.png" style="height: 4vw; width: 4vw; float: right;margin-right: 1vw;" bindtap="thumpUp" data-time="{{item['postTime']}}"></image>
                 <image wx:else src="/image/已点赞.png" style="height: 4vw; width: 4vw; float: right;margin-right: 1vw;"></image>
             </view>
         </scroll-view>
