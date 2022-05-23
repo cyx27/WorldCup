@@ -42,20 +42,10 @@
     "packNpmRelationList": [],
     "minifyWXSS": true,
     "disableUseStrict": false,
-    "minifyWXML": true,
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
-    "ignoreUploadUnusedFiles": true
-  },
-  "compileType": "miniprogram",
-  "libVersion": "2.23.3",
-  "appid": "wxcb1768f01e1a94ad",
-  "projectname": "miniprogram-1",
-  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
-  "cloudfunctionRoot": "cloudfunctions/",
-  "editorSetting": {
-    "tabIndent": "insertSpaces",
-    "tabSize": 4
+    "ignoreUploadUnusedFiles": true,
+    "minifyWXML": true
   },
   "condition": {}
 }

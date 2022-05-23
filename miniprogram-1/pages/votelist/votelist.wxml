@@ -12,12 +12,16 @@
     <button bindtap="resetVote" style="border: solid;">重置</button>
     <view class="list">
       <view class="box" wx:for-items="{{q32}}" wx:key="index" style="width: 22vw; height: 22vh; border: solid 2rpx; margin-top: 10rpx;">
-        <text class="text" space="nbsp">   {{item.value}}</text>
-        <view class="pic" style="width: 20vw; height: 10vh; margin-top: 0%; margin-left: 1vw;">
-          <image src="{{item.url}}" mode="aspectFill" style="width: 20vw; height: 10vh;"></image>
-        </view>
+        <navigator url="/pages/vote_each/vote_each?teamId={{item.name}}&teamName={{item.value}}&url={{item.url}}&vote={{item.vote}}">
+            <text class="text" space="nbsp" style="left: 0; right: 0; margin-top: 8rpx;">{{item.value}}</text>
+            <view class="pic" style="width: 20vw; height: 10vh; margin-top: 0%; margin-left: 1vw;">
+            <image src="{{item.url}}" mode="aspectFill" style="width: 20vw; height: 10vh;"></image>
+            </view>
+        </navigator>
+        
         <view>目前票数:{{q32[index].vote}}</view>
-        <button style="width: 18vw;height: 4vh; font-size: 25rpx;  padding-left: 40rpx;" bindtap="vote" data-name="{{item.name}}" disabled="{{ userQ32[index]==1 }}" >投票</button>
+        <button class="center" wx:if="{{userQ32[index]!=1}}" style="width: 18vw;height: 4vh; font-size: 22rpx;  padding-left: 40rpx;" bindtap="vote" data-name="{{item.name}}" disabled="{{ userQ32[index]==1 }}" >投票</button>
+        <button class="center" wx:else style="width: 18vw;height: 4vh; font-size: 22rpx;  padding-left: 40rpx; background-color: #01DF01; color: white;" bindtap="vote" data-name="{{item.name}}" disabled="{{ userQ32[index]==1 }}" >已投</button>
       </view>
 
     </view>
