@@ -6,8 +6,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+      zero: 0,
+      one: 1,
+      two: 2,
       q32: [],
       userQ32: [],
+      winners3:[],
+      newq32:[],
       allvote:[],
   },
   getallvote:function(e){
@@ -59,6 +64,9 @@ Page({
                       {name: '31', value: '乌拉圭', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/80/ChOxM1xC2UyAFIQpAAAJFbiniWQ532.png',vote: that.data.allvote[30], comment:[]},
                       {name: '32', value: '韩国', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7A/ChOxM1xC2MSAQaWAAAAL1VFSq5U098.png',vote: that.data.allvote[31], comment:[]}],
                   })
+                  that.sortVote()
+                  that.setwinners()
+                  console.log(that.data)
              }
         })
   },
@@ -96,8 +104,8 @@ Page({
        
   },
   vote: function(e) {
-    // console.log(e)
-    // console.log(e.currentTarget.dataset.name)
+    console.log(e)
+    console.log(e.currentTarget.dataset.name)
     let name = e.currentTarget.dataset.name
     let vote = this.getcurrentvote(name)
       wx.showModal({
@@ -106,8 +114,8 @@ Page({
         success: (res) =>{
           if (res.confirm) {
             this.data.userQ32[name-1] = 1;
-            wx.setStorageSync(app.globalData.userInfo.nickName,this.data.userQ32)
-            console.log(wx.getStorageSync(app.globalData.userInfo.nickName))
+            // wx.setStorageSync(app.globalData.userInfo.nickName,this.data.userQ32)
+            // console.log(wx.getStorageSync(app.globalData.userInfo.nickName))
             this.setData({
               userQ32: this.data.userQ32
             })
@@ -119,6 +127,8 @@ Page({
           }
         }
       })
+      this.sortVote()
+      this.setwinners()
   },
 
 
@@ -135,11 +145,34 @@ Page({
    */
   onLoad: function (options) {
     this.getallvote();
+  },
+  sortVote:function(){
+    let property="vote"
+    this.data.q32=this.data.q32.sort(this.compare(property))
+    let temp=this.data.q32
+    this.data.newq32=this.data.q32
+    this.data.q32=temp
     this.setData({
-      userQ32: wx.getStorageSync(app.globalData.userInfo.nickName)
+      'newq32':this.data.newq32,
+      'winners3':this.data.winners3
     })
   },
+  compare:function(property){
+    return function(a,b){
+      let value1=a[property]
+      let value2=b[property]
+      return value2-value1
+    }
+  },
 
+  setwinners:function(){
+    for(let i=1;i<=3;i++){
+      this.data.winners3[i-1]=this.data.newq32[i-1]
+    }
+    this.setData({
+      'winners3':this.data.winners3
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

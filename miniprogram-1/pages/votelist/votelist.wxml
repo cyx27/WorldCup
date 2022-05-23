@@ -3,11 +3,25 @@
   <view class="pic">
     <image src="/image/mid_bk.jpg"></image>
   </view>
+
+
+
   <view class="container" style="background-color: #F2F2F2;">
+
+<!-- 这是前三名的信息, 优化一下布局 -->
+    <image src="{{winners3[one].url}}" style="height: 100rpx; width: 94rpx"></image>当前票数：{{winners3[one].vote}}
+    <image src="{{winners3[zero].url}}" style="height: 100rpx; width: 94rpx"></image>当前票数：{{winners3[zero].vote}}
+    <image src="{{winners3[two].url}}" style="height: 100rpx; width: 94rpx"></image>当前票数：{{winners3[two].vote}}
+
+
+
   <view class="rank">
-    <view style="height: 12vh; width: 20vw;"><image src="/image/medal-silver.png" style="height: 12vh; width: 20vw;"></image></view>
-    <view style="height: 12vh; width: 20vw;"><image src="/image/medal-gold.png" style="height: 12vh; width: 20vw;"></image></view>
-    <view style="height: 12vh; width: 20vw;"><image src="/image/medal-bronze.png" style="height: 12vh; width: 20vw;"></image></view>
+    <image class="down" src="/image/颁奖台.jpg"></image>
+    <image class="up" src="/image/medal-silver.png" style="position: absolute; left: 180rpx; top: 471rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
+    <image class="up" src="/image/medal-gold.png" style="position: absolute; left: 330rpx; top: 434rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
+    <image class="up" src="/image/medal-bronze.png" style="position: absolute; left: 486rpx; top: 474rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
+
+    
   </view>
     <!-- <button bindtap="resetVote" style="border: solid;">重置</button> -->
     <view class="list">
