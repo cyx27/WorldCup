@@ -7,12 +7,14 @@ Page({
    */
   data: {
       q32: [],
-      userQ32: []
+      userQ32: [],
+      winners3:[],
+      newq32:[]
   },
 
   vote: function(e) {
-    // console.log(e)
-    // console.log(e.currentTarget.dataset.name)
+    console.log(e)
+    console.log(e.currentTarget.dataset.name)
     let name = e.currentTarget.dataset.name
     let vote = "vote" + name
  
@@ -42,6 +44,8 @@ Page({
           }
         }
       })
+      this.sortVote()
+      this.setwinners()
   },
 
   setVote: function(){
@@ -67,6 +71,36 @@ Page({
       })
       wx.setStorageSync('userInfo', app)
       this.setVote()
+  },
+
+  sortVote:function(){
+    let property=vote
+    this.data.q32=q32.sort(this.compare(property))
+    let temp=q32
+    this.data.newq32=this.data.q32
+    this.data.q32=temp
+    this.setData({
+      'q32':this.data.q32,
+      'newq32':this.data.newq32,
+      'winners3':this.data.winners3
+    })
+  },
+
+  compare:function(property){
+    return function(a,b){
+      let value1=a[property]
+      let value2=b[property]
+      return value2-value1
+    }
+  },
+
+  setwinners:function(){
+    for(let i=1;i<=3;i++){
+      this.data.winners3[i-1]=this.data.newq32[i-1]
+    }
+    this.setData({
+      'winners3':this.data.winners3
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -109,6 +143,8 @@ Page({
           userQ32: wx.getStorageSync(app.globalData.userInfo.nickName)
       })
       this.setVote()
+      this.sortVote()
+      this.setwinners()
   },
 
   /**

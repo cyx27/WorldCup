@@ -5,9 +5,12 @@
   </view>
   <view class="container" style="background-color: #F2F2F2;">
   <view class="rank">
-    <view style="height: 12vh; width: 20vw;"><image src="/image/medal-silver.png" style="height: 12vh; width: 20vw;"></image></view>
-    <view style="height: 12vh; width: 20vw;"><image src="/image/medal-gold.png" style="height: 12vh; width: 20vw;"></image></view>
-    <view style="height: 12vh; width: 20vw;"><image src="/image/medal-bronze.png" style="height: 12vh; width: 20vw;"></image></view>
+    <image calss="down" src="/image/颁奖台.jpg"></image>
+    <image class="up" src="/image/medal-silver.png" style="position: absolute; left: 180rpx; top: 471rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
+    <image class="up" src="/image/medal-gold.png" style="position: absolute; left: 330rpx; top: 434rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
+    <image class="up" src="/image/medal-bronze.png" style="position: absolute; left: 486rpx; top: 474rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
+
+    
   </view>
     <button bindtap="resetVote" style="border: solid;">重置</button>
     <view class="list">
