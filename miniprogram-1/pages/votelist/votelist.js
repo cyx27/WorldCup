@@ -8,7 +8,7 @@ Page({
   data: {
       q32: [],
       userQ32: [],
-      allvote:[0,0],
+      allvote:[],
   },
   getallvote:function(e){
     let that = this;
