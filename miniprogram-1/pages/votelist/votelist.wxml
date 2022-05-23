@@ -4,24 +4,29 @@
     <image src="/image/mid_bk.jpg"></image>
   </view>
 
-
-
   <view class="container" style="background-color: #F2F2F2;">
 
 <!-- 这是前三名的信息, 优化一下布局 -->
-    <image src="{{winners3[one].url}}" style="height: 100rpx; width: 94rpx"></image>当前票数：{{winners3[one].vote}}
-    <image src="{{winners3[zero].url}}" style="height: 100rpx; width: 94rpx"></image>当前票数：{{winners3[zero].vote}}
-    <image src="{{winners3[two].url}}" style="height: 100rpx; width: 94rpx"></image>当前票数：{{winners3[two].vote}}
-
-
-
+ 
   <view class="rank">
-    <image class="down" src="/image/颁奖台.jpg"></image>
-    <image class="up" src="/image/medal-silver.png" style="position: absolute; left: 180rpx; top: 471rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
-    <image class="up" src="/image/medal-gold.png" style="position: absolute; left: 330rpx; top: 434rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
-    <image class="up" src="/image/medal-bronze.png" style="position: absolute; left: 486rpx; top: 474rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
 
+    <view style="position: absolute; left: 36rpx; top: 320rpx">
+      <image src="/image/medal-silver.png" style="position: absolute; left: 38rpx; top: -192rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
+      <image src="{{winners3[one].url}}" style="position: absolute; height: 100rpx; width: 94rpx; left: 38rpx; top: -92rpx"></image>
+      当前票数：{{winners3[one].vote}}
+    </view>
+
+    <view style="position: absolute; left: 296rpx; top: 269rpx">
+      <image src="/image/medal-gold.png" style="position: absolute; left: 32rpx; top: -196rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
+      <image src="{{winners3[zero].url}}" style="position: absolute; height: 100rpx; width: 94rpx; left: 32rpx; top: -96rpx"></image>
+      当前票数：{{winners3[zero].vote}}
+    </view>
     
+    <view style="position: absolute; left: 526rpx; top: 346rpx">
+      <image src="/image/medal-bronze.png" style="position: absolute; left: 40rpx; top: -178rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
+      <image src="{{winners3[two].url}}" style="position: absolute; height: 100rpx; width: 94rpx; left: 40rpx; top: -78rpx"></image>
+      当前票数：{{winners3[two].vote}}
+    </view> 
   </view>
     <!-- <button bindtap="resetVote" style="border: solid;">重置</button> -->
     <view class="list">

@@ -19,6 +19,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 30rpx;
+  margin-top:200rpx;
 }
 .main .box{
   /* width: 300rpx;
@@ -62,3 +63,5 @@
     justify-content: center; /**内容居中*/
     flex-direction:row; /**子view排列方式row--水平 column--垂直*/
 }
+
+
