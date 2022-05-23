@@ -34,13 +34,43 @@ Page({
             nickName: app.nickName,
             avatarUrl: app.avatarUrl,
         })
-        let key = "comment"+this.data.id
-        if(wx.getStorageSync(key)){
-            this.setData({
-                msgData: wx.getStorageSync(key)
-            })
-        }
+        let that = this;
+        var url="http://150.158.20.204:8000";
+        wx.request({
+            url: url+"/getcomment",
+            data:{
+             name:that.data.id
+            },
+            method:'get',
+            header: {'Content-Type': 'application/json'},
+            success: function(res) {
+              console.log(res.data);
+                    that.setData({
+                      msgData:res.data
+                    })
+                    console.log(that.data.msgData)     
+               }
+          })
         console.log(this.data)
+        console.log(this.data.msgData)
+    },
+    getallcomment:function(e){
+        let that = this;
+        var url="http://150.158.20.204:8000";
+        wx.request({
+            url: url+"/getcomment",
+            data:{
+             name:that.data.id
+            },
+            method:'get',
+            header: {'Content-Type': 'application/json'},
+            success: function(res) {
+              console.log(res.data);
+                    that.setData({
+                      msgData:res.data
+                    })
+               }
+          })
     },
     changeInputVal(ev) {
         this.setData({
@@ -67,22 +97,46 @@ Page({
         this.setData({
             time: dataTime,
         })//先设置时间
-        let allMsg = this.data.msgData
-        let tempMsg = []
-        tempMsg.push(this.data.inputVal)
-        tempMsg.push(this.data.time)
-        tempMsg.push(this.data.nickName)
-        tempMsg.push(this.data.avatarUrl)
-        tempMsg.push(0)
-        allMsg.push(tempMsg)
+        let that = this;
+        var url="http://150.158.20.204:8000";
+        wx.request({
+            url: url+"/comment",
+            data:{
+             teamId:that.data.id,
+             content:that.data.inputVal,
+             postTime:that.data.time,
+             nickName:that.data.nickName,
+             avatarUrl:that.data.avatarUrl,
+            },
+            method:'get',
+            header: {'Content-Type': 'application/json'},
+            success: function(res) {
+                console.log('评论成功');
+               }
+          })
+        this.getallcomment();
         this.setData({
-            msgData: allMsg,
             inputVal: "",
         })
-        let key = "comment"+this.data.id
-        wx.setStorageSync(key, this.data.msgData)
     },
-    deleMsg(ev) {
+    thumpUp(e) {
+        console.log(this.data.msgData)
+        let time = e.currentTarget.dataset.time
+        let that = this;
+        var url="http://150.158.20.204:8000";
+        wx.request({
+            url: url+"/like",
+            data:{
+             teamId:that.data.id,
+             time:time
+            },
+            method:'get',
+            header: {'Content-Type': 'application/json'},
+            success: function(res) {
+                console.log('点赞成功');
+               }
+          })
+        this.getallcomment();
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

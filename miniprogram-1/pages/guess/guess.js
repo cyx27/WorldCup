@@ -12,6 +12,7 @@ var a = getApp();
 Page({
     data: {
         imageWidth: wx.getSystemInfoSync().windowWidth,
+        shareUrl: "",
         imageHeight: wx.getSystemInfoSync().screenHeight,
         wid1: wx.getSystemInfoSync().screenHeight / 15 - wx.getSystemInfoSync().windowWidth,
         q16: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16" ],
@@ -26,6 +27,51 @@ Page({
         "../../image/guo/0.jpg" != this.data.q1 && this.setData({
             tanc: !0
         });
+    },
+    save:function(a){
+            //绘制canvas图片
+            //创建一个canvas对象
+            console.log(a);
+            let that = this;
+            var ctx =  wx.createCanvasContext("ctx");
+            var canvas_height=this.data.imageHeight;
+            var canvas_width=this.data.imageWidth+100;
+            var img='../../image/bag.jpg' ;
+            //console.log(img);
+            ctx.drawImage(img,0,0,canvas_width, canvas_height);
+            ctx.draw(true, function() {
+                console.log("draw");
+                wx.canvasToTempFilePath({
+                      x:0,
+                      y:0,  
+                      ctx,
+                      success(res) {
+                        console.log("成功");
+                        if (res.tempFilePath) {
+                          self.setData({
+                            shareUrl: res.tempFilePath
+                          })
+                          wx.setStorageSync("shareUrl", res.tempFilePath)
+                        }
+                      },
+                      fail:function(res) {
+                        console.log('fail!'+res.errMsg) 
+                        },   
+                    complete:function(res) {
+                        console.log('complete!'+res.errMsg)
+                        }
+                    })
+                  });
+    //console.log(ctx);
+    console.log(this.data.shareUrl);   
+    wx.downloadFile({
+            url: this.data.shareUrl,
+            success: (res) => {
+              wx.showShareImageMenu({
+                path: res.tempFilePath
+              })
+            }
+          })
     },
     butt: function(a) {
         if (1 == a.target.id || 2 == a.target.id) {
