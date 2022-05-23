@@ -28,7 +28,7 @@
         <image bindtap="butt3" id="31" src="{{q2[0]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:360rpx;top:320rpx;"></image>
         <image src="{{q1}}" style="width:115.2rpx;height:56rpx;position:absolute;z-index: 1;left:520rpx;top:320rpx;font-size: 35rpx;text-align: center;line-height:90rpx;"></image>
         <image src="../../image/dali.png" style="width:89rpx;height:178.5rpx;position:absolute;z-index: 2;left:533rpx;top:110rpx;"></image>
-        <button style="width:300rpx;height:80rpx;position:absolute;z-index: 2;left:430rpx;top:600rpx;text-align: center;line-height:80rpx;font-size: 30rpx;" wx:if="{{tanc==true}}">完成</button>
+        <button style="width:300rpx;height:80rpx;position:absolute;z-index: 2;left:430rpx;top:600rpx;text-align: center;line-height:80rpx;font-size: 30rpx;" wx:if="{{tanc==true}}" bindtap="save">完成</button>
         <image bindtap="butt3" id="32" src="{{q2[1]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:680rpx;top:320rpx;"></image>
         <image bindtap="butt2" id="23" src="{{q4[2]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:700rpx;top:145rpx;"></image>
         <image bindtap="butt2" id="24" src="{{q4[3]}}" style="width:99rpx;height:66rpx;position:absolute;z-index: 1;left:700rpx;top:505rpx;"></image>

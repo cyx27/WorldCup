@@ -6,6 +6,9 @@
   color:white;
   line-height: 120rpx;
 }
+.checkbox{
+    width: 47vw;
+}
 .group{
   font-size:17px;
   font-weight: 600;
@@ -21,13 +24,25 @@
   justify-content: space-between;
   flex-wrap: wrap;
   line-height: 80rpx;
-  background-color: rgb(221, 219, 219);
+  background-color: white;
 }
 
-.checkbox{
-  zoom:85%;
-  width:25%;
+
+
+/* 按钮未选中 */
+.normal_button{
+    background: rgb(221, 219, 219);
 }
+  /* 小组第一 */
+.rank_first{
+    background: rgb(255, 196, 2);
+    color: white ;
+  }  
+  /* 小组第二 */
+.rank_second{
+    background: rgb(12, 209, 223);
+    color: white ;
+  }  
 
 .rule{
   background-color: rgb(221, 219, 219);
@@ -43,6 +58,17 @@
   border-radius: 20rpx;
   background: #45b97c;
   color: white;
+}
+.flag {
+  height: 50rpx;
+  width: 50rpx;
+  align-items:center; 
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 

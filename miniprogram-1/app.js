@@ -8,6 +8,7 @@ App({
       env:"cloud1-3gs56q7cf6a19e63",
       traceUser:"true"
     })
+
   },
   globalData: {
     userInfo: null

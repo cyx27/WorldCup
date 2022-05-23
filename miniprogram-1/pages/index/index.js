@@ -6,10 +6,13 @@ const app = getApp()
 
 Page({
   data: {
+    imageWidth: wx.getSystemInfo().windowWidth,
+    imageHeight: wx.getSystemInfo().screenHeight,
     player:[ ],
     todoname:'卡塔尔'
   },
   handleinput(e){
+    console.log(e);
     this.setData({
       todoname:e.detail.value
     })
@@ -31,5 +34,13 @@ Page({
               })
          }
     })
+ },
+
+
+
+ gotoindex(){
+   wx.switchTab({
+     url: '/pages/index/index',
+   })
  }
 })

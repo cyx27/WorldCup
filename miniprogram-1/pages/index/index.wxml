@@ -1,9 +1,17 @@
 <!--index.wxml-->
-首页
-<input class="weui-textarea" placeholder-class="weui-input__placeholder" placeholder="卡塔尔" style="height: 3.3em;" bindinput="handleinput"/>
+<!-- 首页 -->
+<!-- <input class="weui-textarea" placeholder-class="weui-input__placeholder" placeholder="卡塔尔" style="height: 3.3em;" bindinput="handleinput"/>
 <button bindtap="handletap">调用</button>
 <view wx:for="{{player}}" wx:for-item="pro" wx:key="idx">
   <view>--------------------------------</view>
   {{index}}
   <view wx:for="{{pro}}" wx:key="key" wx:for-item="item"> {{index}} {{item}}</view>
+</view> -->
+
+<image src="../../image/temp_background.jpg" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 0;"></image>
+<view class="try">
+  <navigator class="vote-list" url="/pages/votelist/votelist">
+    <image src="../../image/transparent_ball.png" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 1;"></image>
+  </navigator>
 </view>
+
