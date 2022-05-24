@@ -50,11 +50,9 @@ Page({
                     that.setData({
                       msgData:res.data
                     })
-                    console.log(that.data.msgData)     
                     let tempHasVoted = that.data.hasVoted
                     for(let temp = 0; temp < that.data.msgData.length; temp++){
                         let thumbIndex = that.data.nickName + that.data.msgData[temp].postTime
-                        console.log(thumbIndex)
                         if(wx.getStorageSync(thumbIndex)){
                           tempHasVoted[thumbIndex] = 1
                         }
@@ -68,16 +66,12 @@ Page({
                }
           })
         
-      
-      console.log(this.data.hasVoted)
-        console.log(this.data)
-        console.log(this.data.msgData)
+    
     },
     updataThumb: function(){
       let tempHasVoted = this.data.hasVoted
       for(let temp = 0; temp < this.data.msgData.length; temp++){
           let thumbIndex = this.data.nickName + this.data.msgData[temp].postTime
-          console.log(thumbIndex)
           if(wx.getStorageSync(thumbIndex)){
             tempHasVoted[thumbIndex] = 1
           }
@@ -88,7 +82,6 @@ Page({
       this.setData({
           hasVoted: tempHasVoted
       })
-      console.log(this.data.hasVoted)
     },
     getallcomment:function(e){
         let that = this;
@@ -156,7 +149,6 @@ Page({
         })
     },
     thumpUp(e) {
-        console.log(this.data.msgData)
         let time = e.currentTarget.dataset.time
         let that = this;
         var url="http://150.158.20.204:8000";
@@ -172,12 +164,10 @@ Page({
             success: function(res) {
                 console.log('点赞成功')
                 let thumb = app.globalData.userInfo.nickName + time
-                console.log(thumb)
                 wx.setStorageSync(thumb, 1)
                 let tempHasVoted = that.data.hasVoted
                 for(let temp = 0; temp < that.data.msgData.length; temp++){
                     let thumbIndex = that.data.nickName + that.data.msgData[temp].postTime
-                    console.log(thumbIndex)
                     if(wx.getStorageSync(thumbIndex)){
                       tempHasVoted[thumbIndex] = 1
                     }
@@ -188,7 +178,6 @@ Page({
                 that.setData({
                     hasVoted: tempHasVoted
                 })
-                console.log(that.data.hasVoted)
                }
           })
         this.getallcomment();
