@@ -5,6 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        hasVoted: {},
         num0: 0,
         num1: 1,
         num2: 2,
@@ -34,6 +35,7 @@ Page({
             nickName: app.nickName,
             avatarUrl: app.avatarUrl,
         })
+        
         let that = this;
         var url="http://150.158.20.204:8000";
         wx.request({
@@ -49,10 +51,44 @@ Page({
                       msgData:res.data
                     })
                     console.log(that.data.msgData)     
+                    let tempHasVoted = that.data.hasVoted
+                    for(let temp = 0; temp < that.data.msgData.length; temp++){
+                        let thumbIndex = that.data.nickName + that.data.msgData[temp].postTime
+                        console.log(thumbIndex)
+                        if(wx.getStorageSync(thumbIndex)){
+                          tempHasVoted[thumbIndex] = 1
+                        }
+                        else{
+                          tempHasVoted[thumbIndex] = 0
+                        }
+                    }
+                    that.setData({
+                        hasVoted: tempHasVoted
+                    })
                }
           })
+        
+      
+      console.log(this.data.hasVoted)
         console.log(this.data)
         console.log(this.data.msgData)
+    },
+    updataThumb: function(){
+      let tempHasVoted = this.data.hasVoted
+      for(let temp = 0; temp < this.data.msgData.length; temp++){
+          let thumbIndex = this.data.nickName + this.data.msgData[temp].postTime
+          console.log(thumbIndex)
+          if(wx.getStorageSync(thumbIndex)){
+            tempHasVoted[thumbIndex] = 1
+          }
+          else{
+            tempHasVoted[thumbIndex] = 0
+          }
+      }
+      this.setData({
+          hasVoted: tempHasVoted
+      })
+      console.log(this.data.hasVoted)
     },
     getallcomment:function(e){
         let that = this;
@@ -124,6 +160,7 @@ Page({
         let time = e.currentTarget.dataset.time
         let that = this;
         var url="http://150.158.20.204:8000";
+        const app = getApp()
         wx.request({
             url: url+"/like",
             data:{
@@ -133,7 +170,25 @@ Page({
             method:'get',
             header: {'Content-Type': 'application/json'},
             success: function(res) {
-                console.log('点赞成功');
+                console.log('点赞成功')
+                let thumb = app.globalData.userInfo.nickName + time
+                console.log(thumb)
+                wx.setStorageSync(thumb, 1)
+                let tempHasVoted = that.data.hasVoted
+                for(let temp = 0; temp < that.data.msgData.length; temp++){
+                    let thumbIndex = that.data.nickName + that.data.msgData[temp].postTime
+                    console.log(thumbIndex)
+                    if(wx.getStorageSync(thumbIndex)){
+                      tempHasVoted[thumbIndex] = 1
+                    }
+                    else{
+                      tempHasVoted[thumbIndex] = 0
+                    }
+                }
+                that.setData({
+                    hasVoted: tempHasVoted
+                })
+                console.log(that.data.hasVoted)
                }
           })
         this.getallcomment();

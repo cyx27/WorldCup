@@ -1,4 +1,18 @@
 <!--pages/vote_each/vote_each.wxml-->
+<wxs module="function">
+      module.exports = {
+        getHasVoted:function(nickName, time, hasVoted) {
+            var temp = nickName + time
+            console.log(hasVoted[temp])
+            if(hasVoted[temp] == 1){
+                return false;
+            }else{
+                return true;
+            }
+        },
+      }
+</wxs> 
+
 <view class="bg">
     <view>
         <image src="{{url}}" style="position: absolute;left:0;right:0;margin-left:auto;margin-right:auto;top: 5%; width: 30vw; height: 30vw;"></image>
@@ -26,7 +40,7 @@
                 </view>
                 <view class="text1" style="word-break: break-all;">{{item['content']}}</view>
                 <text style="float: right;margin-right: 4vw; font-size: smaller; color: white;">{{item['likes']}}</text>
-                <image wx:if="{{item['likes']==0}}" src="/image/点赞.png" style="height: 4vw; width: 4vw; float: right;margin-right: 1vw;" bindtap="thumpUp" data-time="{{item['postTime']}}"></image>
+                <image wx:if="{{function.getHasVoted(nickName, item.postTime, hasVoted)}}" src="/image/点赞.png" style="height: 4vw; width: 4vw; float: right;margin-right: 1vw;" bindtap="thumpUp" data-time="{{item['postTime']}}"></image>
                 <image wx:else src="/image/已点赞.png" style="height: 4vw; width: 4vw; float: right;margin-right: 1vw;"></image>
             </view>
         </scroll-view>
