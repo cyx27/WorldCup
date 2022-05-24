@@ -38,9 +38,9 @@
             </view>
         </navigator>
         
-        <view>目前票数:{{q32[index].vote}}</view>
-        <button class="center" wx:if="{{userQ32[index]!=1}}" style="width: 18vw;height: 4vh; font-size: 22rpx;  padding-left: 40rpx;" bindtap="vote" data-name="{{item.name}}" disabled="{{ userQ32[index]==1 }}" >投票</button>
-        <button class="center" wx:else style="width: 18vw;height: 4vh; font-size: 22rpx;  padding-left: 40rpx; background-color: #01DF01; color: white;" bindtap="vote" data-name="{{item.name}}" disabled="{{ userQ32[index]==1 }}" >已投</button>
+        <view class="center" style="font-size: 22rpx; font-weight:900;">目前票数:{{q32[index].vote}}</view>
+        <button class="center" wx:if="{{userQ32[index]!=1}}" style="width: 18vw;height: 4vh; font-size: 22rpx;  padding-left: 40rpx; margin-top: 20rpx;" bindtap="vote" data-name="{{item.name}}" disabled="{{ userQ32[index]==1 }}" >投票</button>
+        <button class="center" wx:else style="width: 18vw;height: 4vh; font-size: 22rpx;  padding-left: 40rpx;margin-top: 20rpx; background-color: #01DF01; color: white;" bindtap="vote" data-name="{{item.name}}" disabled="{{true}}" >已投</button>
       </view>
 
     </view>

@@ -63,6 +63,7 @@ Page({
                       {name: '30', value: '加纳', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/77/ChOxM1xC2JGASs2QAAAEP6RcnSU543.png',vote: that.data.allvote[29], comment:[]},
                       {name: '31', value: '乌拉圭', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/80/ChOxM1xC2UyAFIQpAAAJFbiniWQ532.png',vote: that.data.allvote[30], comment:[]},
                       {name: '32', value: '韩国', url: 'https://sd.qunliao.info/fastdfs3/M00/B5/7A/ChOxM1xC2MSAQaWAAAAL1VFSq5U098.png',vote: that.data.allvote[31], comment:[]}],
+                      userQ32: wx.getStorageSync(app.globalData.userInfo.nickName)
                   })
                   that.sortVote()
                   that.setwinners()
@@ -114,8 +115,8 @@ Page({
         success: (res) =>{
           if (res.confirm) {
             this.data.userQ32[name-1] = 1;
-            // wx.setStorageSync(app.globalData.userInfo.nickName,this.data.userQ32)
-            // console.log(wx.getStorageSync(app.globalData.userInfo.nickName))
+            wx.setStorageSync(app.globalData.userInfo.nickName,this.data.userQ32)
+            console.log(wx.getStorageSync(app.globalData.userInfo.nickName))
             this.setData({
               userQ32: this.data.userQ32
             })
