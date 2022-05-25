@@ -14,7 +14,7 @@ Page({
         imageWidth: wx.getSystemInfoSync().windowWidth,
         imageHeight: wx.getSystemInfoSync().screenHeight,
         wid1: wx.getSystemInfoSync().screenHeight / 15 - wx.getSystemInfoSync().windowWidth,
-        q16: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16" ],
+        q16: [ "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png" ],
         q8: [ "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg" ],
         q4: [ "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg" ],
         q2: [ "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg" ],
@@ -53,7 +53,6 @@ Page({
         L.drawImage(this.data.xcxurl, 528 * i, 500 * i, 100 * i, 100 * i), L.draw();
     },
     save: function() {
-        console.log(this.data)
         if (this.draw(), "0" == this.data.q1) wx.showToast({
             duration: 2e3,
             title: "请选择出你的冠军队伍"
@@ -162,289 +161,289 @@ Page({
         switch(e.A[0]){
             case "1":
                 this.setData({
-                    ['q16[1]']: '../../image/guo/卡塔尔.png',
+                    ['q16[1]']: '../../image/guo/Qatar.png',
                 });break;
             case "2":
                 this.setData({
-                    ['q16[1]']: '../../image/guo/厄瓜多尔.png',
+                    ['q16[1]']: '../../image/guo/Ecuador.png',
                 });break;
             case "3":
                 this.setData({
-                    ['q16[1]']: '../../image/guo/塞内加尔.png',
+                    ['q16[1]']: '../../image/guo/Senegal.png',
                 });break;
             case "4":
                 this.setData({
-                    ['q16[1]']: '../../image/guo/荷兰',
+                    ['q16[1]']: '../../image/guo/Netherlands.png',
                 });break;
         }
         switch(e.A[1]){
             case "1":
                 this.setData({
-                    ['q16[10]']: '../../image/guo/卡塔尔.png',
+                    ['q16[10]']: '../../image/guo/Qatar.png',
                 });break;
             case "2":
                 this.setData({
-                    ['q16[10]']: '../../image/guo/厄瓜多尔.png',
+                    ['q16[10]']: '../../image/guo/Ecuador.png',
                 });break;
             case "3":
                 this.setData({
-                    ['q16[10]']: '../../image/guo/喀麦隆.png',
+                    ['q16[10]']: '../../image/guo/Senegal.png',
                 });break;
             case "4":
                 this.setData({
-                    ['q16[10]']: '../../image/guo/荷兰.png',
+                    ['q16[10]']: '../../image/guo/Netherlands.png',
                 });break;
         }
         switch(e.B[0]){
             case "1":
                 this.setData({
-                    ['q16[9]']: '../../image/guo/英格兰.png',
+                    ['q16[9]']: '../../image/guo/England.png',
                 });break;
             case "2":
                 this.setData({
-                    ['q16[9]']: '../../image/guo/伊朗.png',
+                    ['q16[9]']: '../../image/guo/Iran.png',
                 });break;
             case "3":
                 this.setData({
-                    ['q16[9]']: '../../image/guo/美国.png',
+                    ['q16[9]']: '../../image/guo/USA.png',
                 });break;
             case "4":
                 this.setData({
-                    ['q16[9]']: '../../image/guo/威尔士.png',
+                    ['q16[9]']: '../../image/guo/Welsh.png',
                 });break;
         }
         switch(e.B[1]){
             case "1":
                 this.setData({
-                    ['q16[2]']: '../../image/guo/英格兰.png',
+                    ['q16[2]']: '../../image/guo/England.png',
                 });break;
             case "2":
                 this.setData({
-                    ['q16[2]']: '../../image/guo/伊朗.png',
+                    ['q16[2]']: '../../image/guo/Iran.png',
                 });break;
             case "3":
                 this.setData({
-                    ['q16[2]']: '../../image/guo/美国.png',
+                    ['q16[2]']: '../../image/guo/USA.png',
                 });break;
             case "4":
                 this.setData({
-                    ['q16[2]']: '../../image/guo/威尔士.png',
+                    ['q16[2]']: '../../image/guo/Welsh.png',
                 });break;
         }
         switch(e.C[0]){
             case "1":
                 this.setData({
-                    ['q16[3]']: "../../image/guo/阿根廷.png"
+                    ['q16[3]']: "../../image/guo/Argentina.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[3]']: "../../image/guo/沙特阿拉伯.png"
+                    ['q16[3]']: "../../image/guo/SaudiArabia.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[3]']: '../../image/guo/墨西哥.png'
+                    ['q16[3]']: '../../image/guo/Mexico.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[3]']: "../../image/guo/波兰.png"
+                    ['q16[3]']: "../../image/guo/Poland.png"
                 });break;
         }
         switch(e.C[1]){
             case "1":
                 this.setData({
-                    ['q16[12]']: "../../image/guo/阿根廷.png"
+                    ['q16[12]']: "../../image/guo/Argentina.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[12]']: "../../image/guo/沙特阿拉伯.png"
+                    ['q16[12]']: "../../image/guo/SaudiArabia.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[12]']: '../../image/guo/墨西哥.png'
+                    ['q16[12]']: '../../image/guo/Mexico.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[12]']: "../../image/guo/波兰.png"
+                    ['q16[12]']: "../../image/guo/Poland.png"
                 });break;
         }
         switch(e.D[0]){
             case "1":
                 this.setData({
-                    ['q16[11]']: "../../image/guo/法国.png"
+                    ['q16[11]']: "../../image/guo/France.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[11]']: "../../image/guo/秘鲁.png"
+                    ['q16[11]']: "../../image/guo/Peru.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[11]']: '../../image/guo/丹麦.png'
+                    ['q16[11]']: '../../image/guo/Denmark.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[11]']: "../../image/guo/突尼斯.png"
+                    ['q16[11]']: "../../image/guo/Tunisia.png"
                 });break;
         }
         switch(e.D[1]){
             case "1":
                 this.setData({
-                    ['q16[4]']: "../../image/guo/法国.png"
+                    ['q16[4]']: "../../image/guo/France.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[4]']: "../../image/guo/秘鲁.png"
+                    ['q16[4]']: "../../image/guo/Peru.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[4]']: '../../image/guo/丹麦.png'
+                    ['q16[4]']: '../../image/guo/Denmark.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[4]']: "../../image/guo/突尼斯.png"
+                    ['q16[4]']: "../../image/guo/Tunisia.png"
                 });break;
         }
         switch(e.E[0]){
             case "1":
                 this.setData({
-                    ['q16[5]']: "../../image/guo/西班牙.png"
+                    ['q16[5]']: "../../image/guo/Spain.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[5]']: "../../image/guo/哥斯达黎加.png"
+                    ['q16[5]']: "../../image/guo/CostaRica.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[5]']: '../../image/guo/德国.png'
+                    ['q16[5]']: '../../image/guo/Germany.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[5]']: "../../image/guo/日本.png"
+                    ['q16[5]']: "../../image/guo/Japan.png"
                 });break;
         }
         switch(e.E[1]){
             case "1":
                 this.setData({
-                    ['q16[14]']: "../../image/guo/西班牙.png"
+                    ['q16[14]']: "../../image/guo/Spain.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[14]']: "../../image/guo/哥斯达黎加.png"
+                    ['q16[14]']: "../../image/guo/CostaRica.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[14]']: '../../image/guo/德国.png'
+                    ['q16[14]']: '../../image/guo/Germany.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[14]']: "../../image/guo/日本.png"
+                    ['q16[14]']: "../../image/guo/Japan.png"
                 });break;
         }
         switch(e.F[0]){
             case "1":
                 this.setData({
-                    ['q16[13]']: "../../image/guo/比利时.png"
+                    ['q16[13]']: "../../image/guo/Belgium.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[13]']: "../../image/guo/加拿大.png"
+                    ['q16[13]']: "../../image/guo/Canada.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[13]']: '../../image/guo/摩洛哥.png'
+                    ['q16[13]']: '../../image/guo/Morocco.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[13]']: "../../image/guo/克罗地亚.png"
+                    ['q16[13]']: "../../image/guo/Croatia.png"
                 });break;
         }
         switch(e.F[1]){
             case "1":
                 this.setData({
-                    ['q16[6]']: "../../image/guo/比利时.png"
+                    ['q16[6]']: "../../image/guo/Belgium.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[6]']: "../../image/guo/加拿大.png"
+                    ['q16[6]']: "../../image/guo/Canada.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[6]']: '../../image/guo/摩洛哥.png'
+                    ['q16[6]']: '../../image/guo/Morocco.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[6]']: "../../image/guo/克罗地亚.png"
+                    ['q16[6]']: "../../image/guo/Croatia.png"
                 });break;
         }
         switch(e.G[0]){
             case "1":
                 this.setData({
-                    ['q16[7]']: "../../image/guo/巴西.png"
+                    ['q16[7]']: "../../image/guo/Brazil.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[7]']: "../../image/guo/塞尔维亚.png"
+                    ['q16[7]']: "../../image/guo/Serbia.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[7]']: '../../image/guo/瑞士.png'
+                    ['q16[7]']: '../../image/guo/Swiss.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[7]']: "../../image/guo/喀麦隆.png"
+                    ['q16[7]']: "../../image/guo/Cameroon.png"
                 });break;
         }
         switch(e.G[1]){
             case "1":
                 this.setData({
-                    ['q16[16]']: "../../image/guo/巴西.png"
+                    ['q16[16]']: "../../image/guo/Brazil.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[16]']: "../../image/guo/塞尔维亚.png"
+                    ['q16[16]']: "../../image/guo/Serbia.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[16]']: '../../image/guo/瑞士.png'
+                    ['q16[16]']: '../../image/guo/Swiss.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[16]']: "../../image/guo/喀麦隆.png"
+                    ['q16[16]']: "../../image/guo/Cameroon.png"
                 });break;
         }
         switch(e.H[0]){
             case "1":
                 this.setData({
-                    ['q16[15]']: "../../image/guo/葡萄牙.png"
+                    ['q16[15]']: "../../image/guo/Portugal.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[15]']: "../../image/guo/加纳.png"
+                    ['q16[15]']: "../../image/guo/Ghana.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[15]']: '../../image/guo/乌拉圭.png'
+                    ['q16[15]']: '../../image/guo/Uruguay.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[15]']: "../../image/guo/韩国.png"
+                    ['q16[15]']: "../../image/guo/Korea.png"
                 });break;
         }
         switch(e.H[1]){
             case "1":
                 this.setData({
-                    ['q16[8]']: "../../image/guo/葡萄牙.png"
+                    ['q16[8]']: "../../image/guo/Portugal.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[8]']: "../../image/guo/加纳.png"
+                    ['q16[8]']: "../../image/guo/Ghana.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[8]']: '../../image/guo/乌拉圭.png'
+                    ['q16[8]']: '../../image/guo/Uruguay.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[8]']: "../../image/guo/韩国.png"
+                    ['q16[8]']: "../../image/guo/Korea.png"
                 });break;
         }
         var i;
