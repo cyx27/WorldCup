@@ -5,6 +5,7 @@ const app = getApp()
 
 Page({
   data: {
+    res: !1,
     imageWidth: wx.getSystemInfo().windowWidth,
     imageHeight: wx.getSystemInfo().screenHeight,
     player:[ ],
@@ -105,5 +106,11 @@ shuffle(arr, num) {
    wx.switchTab({
      url: '/pages/index/index',
    })
+ },
+
+ oneclick:function(){
+     this.setData({
+         res: !0
+    })
  }
 })

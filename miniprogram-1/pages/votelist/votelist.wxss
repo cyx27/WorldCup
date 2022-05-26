@@ -21,14 +21,14 @@
   padding: 0 30rpx;
   margin-top:200rpx;
 }
-.main .box{
-  /* width: 300rpx;
+/* .main .box{
+  width: 300rpx;
   height: 325rpx;
   border: 1rpx solid #727c77;
   margin-bottom: 80rpx;
   overflow: hidden;
-  border-bottom-width: 5rpx; */
-}
+  border-bottom-width: 5rpx;
+} */
 
 .main .box .pic{
   width: 300rpx;

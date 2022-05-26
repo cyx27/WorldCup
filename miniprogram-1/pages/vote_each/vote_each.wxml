@@ -39,9 +39,12 @@
                     {{item['postTime']}}</text></view>
                 </view>
                 <view class="text1" style="word-break: break-all;">{{item['content']}}</view>
+                <view class="goodjob">
                 <text style="float: right;margin-right: 4vw; font-size: smaller; color: white;">{{item['likes']}}</text>
                 <image wx:if="{{function.getHasVoted(nickName, item.postTime, hasVoted)}}" src="/image/点赞.png" style="height: 4vw; width: 4vw; float: right;margin-right: 1vw;" bindtap="thumpUp" data-time="{{item['postTime']}}"></image>
                 <image wx:else src="/image/已点赞.png" style="height: 4vw; width: 4vw; float: right;margin-right: 1vw;"></image>
+                </view>
+                
             </view>
         </scroll-view>
     </view>
