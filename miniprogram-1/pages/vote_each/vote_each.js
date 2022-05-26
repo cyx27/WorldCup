@@ -27,6 +27,7 @@ Page({
      */
     onLoad(e) {
         let app = wx.getStorageSync('userInfo')
+        console.log(e)
         this.setData({
             id: e.teamId,
             url: e.url,
@@ -83,6 +84,7 @@ Page({
           hasVoted: tempHasVoted
       })
     },
+    
     getallcomment:function(e){
         let that = this;
         var url="http://150.158.20.204:8000";
@@ -101,6 +103,7 @@ Page({
                }
           })
     },
+
     changeInputVal(ev) {
         this.setData({
          inputVal: ev.detail.value//暂存输入框的内容
