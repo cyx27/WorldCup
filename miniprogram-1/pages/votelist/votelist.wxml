@@ -3,16 +3,36 @@
   <view class="pic">
     <image src="/image/mid_bk.jpg"></image>
   </view>
-  <view class="container" style="background-color: #F2F2F2;">
-  <view class="rank">
-    <image calss="down" src="/image/颁奖台.jpg"></image>
-    <image class="up" src="/image/medal-silver.png" style="position: absolute; left: 180rpx; top: 471rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
-    <image class="up" src="/image/medal-gold.png" style="position: absolute; left: 330rpx; top: 434rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
-    <image class="up" src="/image/medal-bronze.png" style="position: absolute; left: 486rpx; top: 474rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
 
+  <view class="container" style="background-color: #F2F2F2;">
+
+
+<!-- 这是前三名的信息, 优化一下布局 -->
+ 
+  <view class="rank">
+
+    <view style="position: absolute; left: 36rpx; top: 320rpx">
+      <image src="/image/medal-silver.png" style="position: absolute; left: 38rpx; top: -192rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
+      <image src="{{winners3[one].url}}" style="position: absolute; height: 100rpx; width: 94rpx; left: 38rpx; top: -92rpx"></image>
+      当前票数：{{winners3[one].vote}}
+    </view>
+
+    <view style="position: absolute; left: 296rpx; top: 269rpx">
+      <image src="/image/medal-gold.png" style="position: absolute; left: 32rpx; top: -196rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
+      <image src="{{winners3[zero].url}}" style="position: absolute; height: 100rpx; width: 94rpx; left: 32rpx; top: -96rpx"></image>
+      当前票数：{{winners3[zero].vote}}
+    </view>
     
+    <view style="position: absolute; left: 526rpx; top: 346rpx">
+      <image src="/image/medal-bronze.png" style="position: absolute; left: 40rpx; top: -178rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
+      <image src="{{winners3[two].url}}" style="position: absolute; height: 100rpx; width: 94rpx; left: 40rpx; top: -78rpx"></image>
+      当前票数：{{winners3[two].vote}}
+    </view> 
   </view>
-    <button bindtap="resetVote" style="border: solid;">重置</button>
+  <view style="position: absolute; left: 39rpx; top: 450rpx">
+  点击投票按钮进行投票，点击国旗图标进行评论
+  </view>
+    <!-- <button bindtap="resetVote" style="border: solid;">重置</button> -->
     <view class="list">
       <view class="box" wx:for-items="{{q32}}" wx:key="index" style="width: 22vw; height: 22vh; border: solid 2rpx; margin-top: 10rpx;">
         <navigator url="/pages/vote_each/vote_each?teamId={{item.name}}&teamName={{item.value}}&url={{item.url}}&vote={{item.vote}}">
@@ -22,9 +42,9 @@
             </view>
         </navigator>
         
-        <view>目前票数:{{q32[index].vote}}</view>
-        <button class="center" wx:if="{{userQ32[index]!=1}}" style="width: 18vw;height: 4vh; font-size: 22rpx;  padding-left: 40rpx;" bindtap="vote" data-name="{{item.name}}" disabled="{{ userQ32[index]==1 }}" >投票</button>
-        <button class="center" wx:else style="width: 18vw;height: 4vh; font-size: 22rpx;  padding-left: 40rpx; background-color: #01DF01; color: white;" bindtap="vote" data-name="{{item.name}}" disabled="{{ userQ32[index]==1 }}" >已投</button>
+        <view class="center" style="font-size: 22rpx; font-weight:900;">目前票数:{{q32[index].vote}}</view>
+        <button class="center" wx:if="{{userQ32[index]!=1}}" style="width: 18vw;height: 4vh; font-size: 22rpx;  padding-left: 40rpx; margin-top: 20rpx;" bindtap="vote" data-name="{{item.name}}" disabled="{{ userQ32[index]==1 }}" >投票</button>
+        <button class="center" wx:else style="width: 18vw;height: 4vh; font-size: 22rpx;  padding-left: 40rpx;margin-top: 20rpx; background-color: #01DF01; color: white;" bindtap="vote" data-name="{{item.name}}" disabled="{{true}}" >已投</button>
       </view>
 
     </view>

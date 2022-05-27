@@ -5,7 +5,6 @@
   background-color: gainsboro;
 }
 .flag {
-
   height: 50rpx;
   width: 50rpx;
   align-items:center; 

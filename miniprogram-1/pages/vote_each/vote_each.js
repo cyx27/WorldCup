@@ -5,6 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        hasVoted: {},
         num0: 0,
         num1: 1,
         num2: 2,
@@ -26,6 +27,7 @@ Page({
      */
     onLoad(e) {
         let app = wx.getStorageSync('userInfo')
+        console.log(e)
         this.setData({
             id: e.teamId,
             url: e.url,
@@ -34,14 +36,74 @@ Page({
             nickName: app.nickName,
             avatarUrl: app.avatarUrl,
         })
-        let key = "comment"+this.data.id
-        if(wx.getStorageSync(key)){
-            this.setData({
-                msgData: wx.getStorageSync(key)
-            })
-        }
-        console.log(this.data)
+        
+        let that = this;
+        var url="https://segmenter.xyz:8000";
+        wx.request({
+            url: url+"/getcomment",
+            data:{
+             name:that.data.id
+            },
+            method:'get',
+            header: {'Content-Type': 'application/json'},
+            success: function(res) {
+              console.log(res.data);
+                    that.setData({
+                      msgData:res.data
+                    })
+                    let tempHasVoted = that.data.hasVoted
+                    for(let temp = 0; temp < that.data.msgData.length; temp++){
+                        let thumbIndex = that.data.nickName + that.data.msgData[temp].postTime
+                        if(wx.getStorageSync(thumbIndex)){
+                          tempHasVoted[thumbIndex] = 1
+                        }
+                        else{
+                          tempHasVoted[thumbIndex] = 0
+                        }
+                    }
+                    that.setData({
+                        hasVoted: tempHasVoted
+                    })
+               }
+          })
+        
+    
     },
+    updataThumb: function(){
+      let tempHasVoted = this.data.hasVoted
+      for(let temp = 0; temp < this.data.msgData.length; temp++){
+          let thumbIndex = this.data.nickName + this.data.msgData[temp].postTime
+          if(wx.getStorageSync(thumbIndex)){
+            tempHasVoted[thumbIndex] = 1
+          }
+          else{
+            tempHasVoted[thumbIndex] = 0
+          }
+      }
+      this.setData({
+          hasVoted: tempHasVoted
+      })
+    },
+    
+    getallcomment:function(e){
+        let that = this;
+        var url="https://segmenter.xyz:8000";
+        wx.request({
+            url: url+"/getcomment",
+            data:{
+             name:that.data.id
+            },
+            method:'get',
+            header: {'Content-Type': 'application/json'},
+            success: function(res) {
+              console.log(res.data);
+                    that.setData({
+                      msgData:res.data
+                    })
+               }
+          })
+    },
+
     changeInputVal(ev) {
         this.setData({
          inputVal: ev.detail.value//暂存输入框的内容
@@ -67,38 +129,61 @@ Page({
         this.setData({
             time: dataTime,
         })//先设置时间
-        let allMsg = this.data.msgData
-        let tempMsg = []
-        tempMsg.push(this.data.inputVal)
-        tempMsg.push(this.data.time)
-        tempMsg.push(this.data.nickName)
-        tempMsg.push(this.data.avatarUrl)
-        tempMsg.push(0)
-        allMsg.push(tempMsg)
+        let that = this;
+        var url="https://segmenter.xyz:8000";
+        wx.request({
+            url: url+"/comment",
+            data:{
+             teamId:that.data.id,
+             content:that.data.inputVal,
+             postTime:that.data.time,
+             nickName:that.data.nickName,
+             avatarUrl:that.data.avatarUrl,
+            },
+            method:'get',
+            header: {'Content-Type': 'application/json'},
+            success: function(res) {
+                console.log('评论成功');
+               }
+          })
+        this.getallcomment();
         this.setData({
-            msgData: allMsg,
             inputVal: "",
         })
-        let key = "comment"+this.data.id
-        wx.setStorageSync(key, this.data.msgData)
     },
     thumpUp(e) {
         let time = e.currentTarget.dataset.time
-        let newMsgData = []
-        for(let i=0;i<this.data.msgData.length;i++){
-            if(this.data.msgData[i][1] == time){
-                let temp = this.data.msgData[i]
-                temp[4] += 1
-                newMsgData.push(temp)
-            }else{
-                newMsgData.push(this.data.msgData[i])
-            }
-        }
-        this.setData({
-            msgData: newMsgData
-        })
-        let key = "comment"+this.data.id
-        wx.setStorageSync(key, this.data.msgData)
+        let that = this;
+        var url="https://segmenter.xyz:8000";
+        const app = getApp()
+        wx.request({
+            url: url+"/like",
+            data:{
+             teamId:that.data.id,
+             time:time
+            },
+            method:'get',
+            header: {'Content-Type': 'application/json'},
+            success: function(res) {
+                console.log('点赞成功')
+                let thumb = app.globalData.userInfo.nickName + time
+                wx.setStorageSync(thumb, 1)
+                let tempHasVoted = that.data.hasVoted
+                for(let temp = 0; temp < that.data.msgData.length; temp++){
+                    let thumbIndex = that.data.nickName + that.data.msgData[temp].postTime
+                    if(wx.getStorageSync(thumbIndex)){
+                      tempHasVoted[thumbIndex] = 1
+                    }
+                    else{
+                      tempHasVoted[thumbIndex] = 0
+                    }
+                }
+                that.setData({
+                    hasVoted: tempHasVoted
+                })
+               }
+          })
+        this.getallcomment();
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

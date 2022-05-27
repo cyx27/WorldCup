@@ -12,14 +12,14 @@ var a = getApp();
 Page({
     data: {
         imageWidth: wx.getSystemInfoSync().windowWidth,
-        shareUrl: "",
         imageHeight: wx.getSystemInfoSync().screenHeight,
         wid1: wx.getSystemInfoSync().screenHeight / 15 - wx.getSystemInfoSync().windowWidth,
-        q16: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16" ],
+        q16: [ "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png", "../../image/guo/Qatar.png" ],
         q8: [ "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg" ],
         q4: [ "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg" ],
         q2: [ "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg", "../../image/guo/0.jpg" ],
         q1: "../../image/guo/0.jpg",
+        xcxurl: "",
         huab: !1,
         tanc: !1,
     },
@@ -28,50 +28,63 @@ Page({
             tanc: !0
         });
     },
-    save:function(a){
-            //绘制canvas图片
-            //创建一个canvas对象
-            console.log(a);
-            let that = this;
-            var ctx =  wx.createCanvasContext("ctx");
-            var canvas_height=this.data.imageHeight;
-            var canvas_width=this.data.imageWidth+100;
-            var img='../../image/bag.jpg' ;
-            //console.log(img);
-            ctx.drawImage(img,0,0,canvas_width, canvas_height);
-            ctx.draw(true, function() {
-                console.log("draw");
+    draw: function() {
+        var t = this, i = t.data.imageWidth / 750, e = t.data.imageWidth, d = (t.data.imageHeight, 
+        this.data.q16[1]), g = this.data.q16[2], s = this.data.q16[3], r = this.data.q16[4], h = this.data.q16[5], q = this.data.q16[6], n = this.data.q16[7], o = this.data.q16[8], m = this.data.q16[9], u = this.data.q16[10], w = this.data.q16[11], c = this.data.q16[12], f = this.data.q16[13], l = this.data.q16[14], I = this.data.q16[15], x = this.data.q16[16], p = this.data.q8[0], j = this.data.q8[1], D = this.data.q8[2], v = this.data.q8[3], T = this.data.q8[4], b = this.data.q8[5], y = this.data.q8[6], S = this.data.q8[7], F = this.data.q4[0], P = this.data.q4[1], W = this.data.q4[2], A = this.data.q4[3], H = this.data.q2[0], M = this.data.q2[1], C = this.data.q1, B = this.data.suiji, L = wx.createCanvasContext("canvas");
+        L.drawImage("../../image/bag.jpg", 0, 0, e, 1320.2 * i), L.translate(750 * i, 750 * i), 
+        L.rotate(90 * Math.PI / 180), L.translate(-663 * i, 20 * i), L.drawImage("../../image/bag1.png", 0, 0, 1125.2 * i, 686 * i), 
+        L.drawImage("../../image/dali.png", 533 * i, 110 * i, 89 * i, 178 * i), L.setFontSize(40 * i), 
+        L.drawImage(d, 10 * i, 10 * i, 99 * i, 66 * i), 
+        L.drawImage(g, 10 * i, 100 * i, 99 * i, 66 * i), L.drawImage(s, 10 * i, 190 * i, 99 * i, 66 * i), 
+        L.drawImage(r, 10 * i, 280 * i, 99 * i, 66 * i), L.drawImage(h, 10 * i, 370 * i, 99 * i, 66 * i), 
+        L.drawImage(q, 10 * i, 460 * i, 99 * i, 66 * i), L.drawImage(n, 10 * i, 550 * i, 99 * i, 66 * i), 
+        L.drawImage(o, 10 * i, 640 * i, 99 * i, 66 * i), L.drawImage(m, 1020 * i, 10 * i, 99 * i, 66 * i), 
+        L.drawImage(u, 1020 * i, 100 * i, 99 * i, 66 * i), L.drawImage(w, 1020 * i, 190 * i, 99 * i, 66 * i), 
+        L.drawImage(c, 1020 * i, 280 * i, 99 * i, 66 * i), L.drawImage(f, 1020 * i, 370 * i, 99 * i, 66 * i), 
+        L.drawImage(l, 1020 * i, 460 * i, 99 * i, 66 * i), L.drawImage(I, 1020 * i, 550 * i, 99 * i, 66 * i), 
+        L.drawImage(x, 1020 * i, 640 * i, 99 * i, 66 * i), L.drawImage(p, 180 * i, 55 * i, 99 * i, 66 * i), 
+        L.drawImage(j, 180 * i, 235 * i, 99 * i, 66 * i), L.drawImage(D, 180 * i, 415 * i, 99 * i, 66 * i), 
+        L.drawImage(v, 180 * i, 595 * i, 99 * i, 66 * i), L.drawImage(T, 860 * i, 55 * i, 99 * i, 66 * i), 
+        L.drawImage(b, 860 * i, 235 * i, 99 * i, 66 * i), L.drawImage(y, 860 * i, 415 * i, 99 * i, 66 * i), 
+        L.drawImage(S, 860 * i, 595 * i, 99 * i, 66 * i), L.drawImage(F, 340 * i, 145 * i, 99 * i, 66 * i), 
+        L.drawImage(P, 340 * i, 505 * i, 99 * i, 66 * i), L.drawImage(W, 700 * i, 145 * i, 99 * i, 66 * i), 
+        L.drawImage(A, 700 * i, 505 * i, 99 * i, 66 * i), L.drawImage(H, 360 * i, 320 * i, 99 * i, 66 * i), 
+        L.drawImage(M, 680 * i, 320 * i, 99 * i, 66 * i), L.drawImage(C, 520 * i, 320 * i, 99 * i, 66 * i), 
+        L.drawImage(this.data.xcxurl, 528 * i, 500 * i, 100 * i, 100 * i), L.draw();
+    },
+    save: function() {
+        if (this.draw(), "0" == this.data.q1) wx.showToast({
+            duration: 2e3,
+            title: "请选择出你的冠军队伍"
+        }); else {
+            this.setData({
+                huab: !0
+            });
+            var t = this;
+            t.data.imageWidth;
+            setTimeout(function() {
                 wx.canvasToTempFilePath({
-                      x:0,
-                      y:0,  
-                      ctx,
-                      success(res) {
-                        console.log("成功");
-                        if (res.tempFilePath) {
-                          self.setData({
-                            shareUrl: res.tempFilePath
-                          })
-                          wx.setStorageSync("shareUrl", res.tempFilePath)
-                        }
-                      },
-                      fail:function(res) {
-                        console.log('fail!'+res.errMsg) 
-                        },   
-                    complete:function(res) {
-                        console.log('complete!'+res.errMsg)
-                        }
-                    })
-                  });
-    //console.log(ctx);
-    console.log(this.data.shareUrl);   
-    wx.downloadFile({
-            url: this.data.shareUrl,
-            success: (res) => {
-              wx.showShareImageMenu({
-                path: res.tempFilePath
-              })
-            }
-          })
+                    canvasId: "canvas",
+                    x: 0,
+                    y: 0,
+                    width: t.data.imageWidth,
+                    height: t.data.imageHeight,
+                    success: function(t) {
+                        wx.saveImageToPhotosAlbum({
+                            filePath: t.tempFilePath,
+                            success: function(t) {
+                                wx.showToast({
+                                    title: "已保存到相册"
+                                });
+                            },
+                            fail: function() {
+                                wx.hideLoading();
+                            }
+                        });
+                    }
+                });
+            }, 1e3);
+        }
     },
     butt: function(a) {
         if (1 == a.target.id || 2 == a.target.id) {
@@ -148,289 +161,289 @@ Page({
         switch(e.A[0]){
             case "1":
                 this.setData({
-                    ['q16[1]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/7C/ChOxM1xC2PyAX4i0AAAJXV6GRFw977.png',
+                    ['q16[1]']: '../../image/guo/Qatar.png',
                 });break;
             case "2":
                 this.setData({
-                    ['q16[1]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/75/ChOxM1xC2FSADy_DAAALaURezqo279.png',
+                    ['q16[1]']: '../../image/guo/Ecuador.png',
                 });break;
             case "3":
                 this.setData({
-                    ['q16[1]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/7D/ChOxM1xC2RKAS3NNAAAC2Nr8OzA389.png',
+                    ['q16[1]']: '../../image/guo/Senegal.png',
                 });break;
             case "4":
                 this.setData({
-                    ['q16[1]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/7B/ChOxM1xC2N6AEWYMAAABPByVIVM465.png',
+                    ['q16[1]']: '../../image/guo/Netherlands.png',
                 });break;
         }
         switch(e.A[1]){
             case "1":
                 this.setData({
-                    ['q16[10]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/7C/ChOxM1xC2PyAX4i0AAAJXV6GRFw977.png',
+                    ['q16[10]']: '../../image/guo/Qatar.png',
                 });break;
             case "2":
                 this.setData({
-                    ['q16[10]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/75/ChOxM1xC2FSADy_DAAALaURezqo279.png',
+                    ['q16[10]']: '../../image/guo/Ecuador.png',
                 });break;
             case "3":
                 this.setData({
-                    ['q16[10]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/7D/ChOxM1xC2RKAS3NNAAAC2Nr8OzA389.png',
+                    ['q16[10]']: '../../image/guo/Senegal.png',
                 });break;
             case "4":
                 this.setData({
-                    ['q16[10]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/7B/ChOxM1xC2N6AEWYMAAABPByVIVM465.png',
+                    ['q16[10]']: '../../image/guo/Netherlands.png',
                 });break;
         }
         switch(e.B[0]){
             case "1":
                 this.setData({
-                    ['q16[9]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/76/ChOxM1xC2G2Acp31AAABNMvdP0U855.png',
+                    ['q16[9]']: '../../image/guo/England.png',
                 });break;
             case "2":
                 this.setData({
-                    ['q16[9]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/78/ChOxM1xC2KGAIsqKAAAVUXXXPL0755.png',
+                    ['q16[9]']: '../../image/guo/Iran.png',
                 });break;
             case "3":
                 this.setData({
-                    ['q16[9]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/7F/ChOxM1xC2UmAAa6sAAAQEZEKYAA997.png',
+                    ['q16[9]']: '../../image/guo/USA.png',
                 });break;
             case "4":
                 this.setData({
-                    ['q16[9]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/80/ChOxM1xC2VGAYhOTAAAbZ1CFkQg735.png',
+                    ['q16[9]']: '../../image/guo/Welsh.png',
                 });break;
         }
         switch(e.B[1]){
             case "1":
                 this.setData({
-                    ['q16[2]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/76/ChOxM1xC2G2Acp31AAABNMvdP0U855.png',
+                    ['q16[2]']: '../../image/guo/England.png',
                 });break;
             case "2":
                 this.setData({
-                    ['q16[2]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/78/ChOxM1xC2KGAIsqKAAAVUXXXPL0755.png',
+                    ['q16[2]']: '../../image/guo/Iran.png',
                 });break;
             case "3":
                 this.setData({
-                    ['q16[2]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/7F/ChOxM1xC2UmAAa6sAAAQEZEKYAA997.png',
+                    ['q16[2]']: '../../image/guo/USA.png',
                 });break;
             case "4":
                 this.setData({
-                    ['q16[2]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/80/ChOxM1xC2VGAYhOTAAAbZ1CFkQg735.png',
+                    ['q16[2]']: '../../image/guo/Welsh.png',
                 });break;
         }
         switch(e.C[0]){
             case "1":
                 this.setData({
-                    ['q16[3]']: "https://sd.qunliao.info/fastdfs3/M00/B5/72/ChOxM1xC2A-AI_uOAAAHB-5pMAU501.png"
+                    ['q16[3]']: "../../image/guo/Argentina.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[3]']: "https://sd.qunliao.info/fastdfs3/M00/B5/7D/ChOxM1xC2QmAWthoAAAKQAUuoQY168.png"
+                    ['q16[3]']: "../../image/guo/SaudiArabia.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[3]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/7A/ChOxM1xC2NOAIENZAAAIVenmXhE159.png'
+                    ['q16[3]']: '../../image/guo/Mexico.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[3]']: "https://sd.qunliao.info/fastdfs3/M00/B5/7C/ChOxM1xC2PGALY-zAAAAqYWqc08697.png"
+                    ['q16[3]']: "../../image/guo/Poland.png"
                 });break;
         }
         switch(e.C[1]){
             case "1":
                 this.setData({
-                    ['q16[12]']: "https://sd.qunliao.info/fastdfs3/M00/B5/72/ChOxM1xC2A-AI_uOAAAHB-5pMAU501.png"
+                    ['q16[12]']: "../../image/guo/Argentina.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[12]']: "https://sd.qunliao.info/fastdfs3/M00/B5/7D/ChOxM1xC2QmAWthoAAAKQAUuoQY168.png"
+                    ['q16[12]']: "../../image/guo/SaudiArabia.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[12]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/7A/ChOxM1xC2NOAIENZAAAIVenmXhE159.png'
+                    ['q16[12]']: '../../image/guo/Mexico.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[12]']: "https://sd.qunliao.info/fastdfs3/M00/B5/7C/ChOxM1xC2PGALY-zAAAAqYWqc08697.png"
+                    ['q16[12]']: "../../image/guo/Poland.png"
                 });break;
         }
         switch(e.D[0]){
             case "1":
                 this.setData({
-                    ['q16[11]']: "https://sd.qunliao.info/fastdfs3/M00/B5/77/ChOxM1xC2IKANG6tAAABFW9OqCQ523.png"
+                    ['q16[11]']: "../../image/guo/France.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[11]']: "https://sd.qunliao.info/fastdfs3/M00/B5/7B/ChOxM1xC2OyAMboLAAAE67UTWH4126.png"
+                    ['q16[11]']: "../../image/guo/Peru.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[11]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/75/ChOxM1xC2FGAU4XgAAABUo4hnUQ558.png'
+                    ['q16[11]']: '../../image/guo/Denmark.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[11]']: "https://sd.qunliao.info/fastdfs3/M00/B5/7F/ChOxM1xC2T6AVxyuAAAF5xZKmyM136.png"
+                    ['q16[11]']: "../../image/guo/Tunisia.png"
                 });break;
         }
         switch(e.D[1]){
             case "1":
                 this.setData({
-                    ['q16[4]']: "https://sd.qunliao.info/fastdfs3/M00/B5/77/ChOxM1xC2IKANG6tAAABFW9OqCQ523.png"
+                    ['q16[4]']: "../../image/guo/France.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[4]']: "https://sd.qunliao.info/fastdfs3/M00/B5/7B/ChOxM1xC2OyAMboLAAAE67UTWH4126.png"
+                    ['q16[4]']: "../../image/guo/Peru.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[4]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/75/ChOxM1xC2FGAU4XgAAABUo4hnUQ558.png'
+                    ['q16[4]']: '../../image/guo/Denmark.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[4]']: "https://sd.qunliao.info/fastdfs3/M00/B5/7F/ChOxM1xC2T6AVxyuAAAF5xZKmyM136.png"
+                    ['q16[4]']: "../../image/guo/Tunisia.png"
                 });break;
         }
         switch(e.E[0]){
             case "1":
                 this.setData({
-                    ['q16[5]']: "https://sd.qunliao.info/fastdfs3/M00/B5/7E/ChOxM1xC2TCAWMemAAAJsy8Pgbg246.png"
+                    ['q16[5]']: "../../image/guo/Spain.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[5]']: "https://sd.qunliao.info/fastdfs3/M00/B5/74/ChOxM1xC2EKAaFLCAAAGgA8WOkI815.png"
+                    ['q16[5]']: "../../image/guo/CostaRica.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[5]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/77/ChOxM1xC2JGAd79VAAAAyGVvoVQ975.png'
+                    ['q16[5]']: '../../image/guo/Germany.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[5]']: "https://sd.qunliao.info/fastdfs3/M00/B5/79/ChOxM1xC2L6AHvC4AAAEdawnP9Q689.png"
+                    ['q16[5]']: "../../image/guo/Japan.png"
                 });break;
         }
         switch(e.E[1]){
             case "1":
                 this.setData({
-                    ['q16[14]']: "https://sd.qunliao.info/fastdfs3/M00/B5/7E/ChOxM1xC2TCAWMemAAAJsy8Pgbg246.png"
+                    ['q16[14]']: "../../image/guo/Spain.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[14]']: "https://sd.qunliao.info/fastdfs3/M00/B5/74/ChOxM1xC2EKAaFLCAAAGgA8WOkI815.png"
+                    ['q16[14]']: "../../image/guo/CostaRica.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[14]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/77/ChOxM1xC2JGAd79VAAAAyGVvoVQ975.png'
+                    ['q16[14]']: '../../image/guo/Germany.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[14]']: "https://sd.qunliao.info/fastdfs3/M00/B5/79/ChOxM1xC2L6AHvC4AAAEdawnP9Q689.png"
+                    ['q16[14]']: "../../image/guo/Japan.png"
                 });break;
         }
         switch(e.F[0]){
             case "1":
                 this.setData({
-                    ['q16[13]']: "https://sd.qunliao.info/fastdfs3/M00/B5/72/ChOxM1xC2CKAJTG3AAAAypTh1A8948.png"
+                    ['q16[13]']: "../../image/guo/Belgium.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[13]']: "https://sd.qunliao.info/fastdfs3/M00/B5/73/ChOxM1xC2DSAay2bAAAF1Vkv5Qg286.png"
+                    ['q16[13]']: "../../image/guo/Canada.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[13]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/7A/ChOxM1xC2NWAZiM1AAADL6R9t6s156.png'
+                    ['q16[13]']: '../../image/guo/Morocco.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[13]']: "https://sd.qunliao.info/fastdfs3/M00/B5/74/ChOxM1xC2EOAbUHIAAAOg6JpgzM729.pngg"
+                    ['q16[13]']: "../../image/guo/Croatia.png"
                 });break;
         }
         switch(e.F[1]){
             case "1":
                 this.setData({
-                    ['q16[6]']: "https://sd.qunliao.info/fastdfs3/M00/B5/72/ChOxM1xC2CKAJTG3AAAAypTh1A8948.png"
+                    ['q16[6]']: "../../image/guo/Belgium.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[6]']: "https://sd.qunliao.info/fastdfs3/M00/B5/73/ChOxM1xC2DSAay2bAAAF1Vkv5Qg286.png"
+                    ['q16[6]']: "../../image/guo/Canada.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[6]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/7A/ChOxM1xC2NWAZiM1AAADL6R9t6s156.png'
+                    ['q16[6]']: '../../image/guo/Morocco.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[6]']: "https://sd.qunliao.info/fastdfs3/M00/B5/74/ChOxM1xC2EOAbUHIAAAOg6JpgzM729.pngg"
+                    ['q16[6]']: "../../image/guo/Croatia.png"
                 });break;
         }
         switch(e.G[0]){
             case "1":
                 this.setData({
-                    ['q16[7]']: "https://sd.qunliao.info/fastdfs3/M00/B5/73/ChOxM1xC2DCAM4slAAAMODYb5Wo093.png"
+                    ['q16[7]']: "../../image/guo/Brazil.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[7]']: "https://sd.qunliao.info/fastdfs3/M00/B5/87/ChOxM1xC2iSAWoJLAAANi61d2EA772.png"
+                    ['q16[7]']: "../../image/guo/Serbia.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[7]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/7F/ChOxM1xC2TyANIAKAAABeUfO5gM520.png'
+                    ['q16[7]']: '../../image/guo/Swiss.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[7]']: "https://sd.qunliao.info/fastdfs3/M00/B5/73/ChOxM1xC2DOANFruAAAC0MdXvjY313.png"
+                    ['q16[7]']: "../../image/guo/Cameroon.png"
                 });break;
         }
         switch(e.G[1]){
             case "1":
                 this.setData({
-                    ['q16[16]']: "https://sd.qunliao.info/fastdfs3/M00/B5/73/ChOxM1xC2DCAM4slAAAMODYb5Wo093.png"
+                    ['q16[16]']: "../../image/guo/Brazil.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[16]']: "https://sd.qunliao.info/fastdfs3/M00/B5/87/ChOxM1xC2iSAWoJLAAANi61d2EA772.png"
+                    ['q16[16]']: "../../image/guo/Serbia.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[16]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/7F/ChOxM1xC2TyANIAKAAABeUfO5gM520.png'
+                    ['q16[16]']: '../../image/guo/Swiss.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[16]']: "https://sd.qunliao.info/fastdfs3/M00/B5/73/ChOxM1xC2DOANFruAAAC0MdXvjY313.png"
+                    ['q16[16]']: "../../image/guo/Cameroon.png"
                 });break;
         }
         switch(e.H[0]){
             case "1":
                 this.setData({
-                    ['q16[15]']: "https://sd.qunliao.info/fastdfs3/M00/B5/7C/ChOxM1xC2PuALvwRAAAK3F_koeE108.png"
+                    ['q16[15]']: "../../image/guo/Portugal.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[15]']: "https://sd.qunliao.info/fastdfs3/M00/B5/77/ChOxM1xC2JGASs2QAAAEP6RcnSU543.png"
+                    ['q16[15]']: "../../image/guo/Ghana.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[15]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/80/ChOxM1xC2UyAFIQpAAAJFbiniWQ532.png'
+                    ['q16[15]']: '../../image/guo/Uruguay.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[15]']: "https://sd.qunliao.info/fastdfs3/M00/B5/7A/ChOxM1xC2MSAQaWAAAAL1VFSq5U098.png"
+                    ['q16[15]']: "../../image/guo/Korea.png"
                 });break;
         }
         switch(e.H[1]){
             case "1":
                 this.setData({
-                    ['q16[8]']: "https://sd.qunliao.info/fastdfs3/M00/B5/7C/ChOxM1xC2PuALvwRAAAK3F_koeE108.png"
+                    ['q16[8]']: "../../image/guo/Portugal.png"
                 });break;
             case "2":
                 this.setData({
-                    ['q16[8]']: "https://sd.qunliao.info/fastdfs3/M00/B5/77/ChOxM1xC2JGASs2QAAAEP6RcnSU543.png"
+                    ['q16[8]']: "../../image/guo/Ghana.png"
                 });break;
             case "3":
                 this.setData({
-                    ['q16[8]']: 'https://sd.qunliao.info/fastdfs3/M00/B5/80/ChOxM1xC2UyAFIQpAAAJFbiniWQ532.png'
+                    ['q16[8]']: '../../image/guo/Uruguay.png'
                 });break;
             case "4":
                 this.setData({
-                    ['q16[8]']: "https://sd.qunliao.info/fastdfs3/M00/B5/7A/ChOxM1xC2MSAQaWAAAAL1VFSq5U098.png"
+                    ['q16[8]']: "../../image/guo/Korea.png"
                 });break;
         }
         var i;

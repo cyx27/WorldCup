@@ -19,15 +19,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 30rpx;
+  margin-top:300rpx;
 }
-.main .box{
-  /* width: 300rpx;
+/* .main .box{
+  width: 300rpx;
   height: 325rpx;
   border: 1rpx solid #727c77;
   margin-bottom: 80rpx;
   overflow: hidden;
-  border-bottom-width: 5rpx; */
-}
+  border-bottom-width: 5rpx;
+} */
 
 .main .box .pic{
   width: 300rpx;
@@ -62,12 +63,5 @@
     justify-content: center; /**内容居中*/
     flex-direction:row; /**子view排列方式row--水平 column--垂直*/
 }
-.down{
-  z-index: -1;
-  position: absolute;
-}
 
-.up{
-  z-index: 0;
-  position:absolute;
-}
+

@@ -4,7 +4,7 @@
 <view class="group">A组</view>
 <view>
     <view class="box" >
-        <label class="checkbox" style="margin:5rpx 0 5rpx 0;" wx:for-items="{{itemsA}}">
+        <label class="checkbox" wx:for-items="{{itemsA}}">
         <button style="margin:5rpx 0 5rpx 0;width: 47vw;" wx:if="{{item.checked}}" class='{{chuxianA[zero]==item.name?"rank_first":"rank_second"}}' bindtap="checkboxChangeA" data-name='{{item.name}}'>
             <view class="content">
                 <image src="{{item.url}}" class="flag"></image>

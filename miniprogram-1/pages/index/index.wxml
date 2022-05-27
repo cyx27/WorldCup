@@ -8,10 +8,69 @@
   <view wx:for="{{pro}}" wx:key="key" wx:for-item="item"> {{index}} {{item}}</view>
 </view> -->
 
+<view>
 <image src="../../image/temp_background.jpg" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 0;"></image>
-<view class="try">
-  <navigator class="vote-list" url="/pages/votelist/votelist">
-    <image src="../../image/transparent_ball.png" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 1;"></image>
-  </navigator>
+    <view wx:if="{{res==false}}">
+        <image bindtap="oneclick" src="../../image//click1.png" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 2;"></image>
+    </view>
 </view>
+
+
+  <navigator url="/pages/votelist/votelist">
+    <image src="../../image/transparent_ball.png" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 1;"></image>
+    <view class="box">
+
+        <view class="content1">
+        <image src="{{msgData[0].teamId}}" class="flag"></image>
+        <text decode="{{true}}">&nbsp;&nbsp;{{msgData[0].content}}</text>
+        </view>
+
+        <view class="content3">
+        <image src="{{msgData[1].teamId}}" class="flag"></image>
+        <text decode="{{true}}">&nbsp;&nbsp;{{msgData[1].content}}</text>
+        </view>
+
+        <view class="content2">
+        <image src="{{msgData[2].teamId}}" class="flag"></image>
+        <text decode="{{true}}">&nbsp;&nbsp;{{msgData[2].content}}</text>
+        </view>
+
+        <view class="content5">
+        <image src="{{msgData[3].teamId}}" class="flag"></image>
+        <text decode="{{true}}">&nbsp;&nbsp;{{msgData[3].content}}</text>
+        </view>
+
+        <view class="content1">
+        <image src="{{msgData[4].teamId}}" class="flag"></image>
+        <text decode="{{true}}">&nbsp;&nbsp;{{msgData[4].content}}</text>
+        </view>
+
+        <view class="content4">
+        <image src="{{msgData[5].teamId}}" class="flag"></image>
+        <text decode="{{true}}">&nbsp;&nbsp;{{msgData[5].content}}</text>
+        </view>
+
+        <view class="content3">
+        <image src="{{msgData[6].teamId}}" class="flag"></image>
+        <text decode="{{true}}">&nbsp;&nbsp;{{msgData[6].content}}</text>
+        </view>
+
+        <view class="content2">
+        <image src="{{msgData[7].teamId}}" class="flag"></image>
+        <text decode="{{true}}">&nbsp;&nbsp;{{msgData[7].content}}</text>
+        </view>
+
+        <view class="content5">
+        <image src="{{msgData[8].teamId}}" class="flag"></image>
+        <text decode="{{true}}">&nbsp;&nbsp;{{msgData[8].content}}</text>
+        </view>
+
+        <view class="content4">
+        <image src="{{msgData[9].teamId}}" class="flag"></image>
+        <text decode="{{true}}">&nbsp;&nbsp;{{msgData[9].content}}</text>
+        </view>
+ 
+    </view>
+  </navigator>
+
 

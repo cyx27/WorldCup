@@ -1,5 +1,159 @@
 /**index.wxss**/
-.usermotto {
+/* .usermotto {
+  position: relative;
+  z-index: 1;
   margin-top: 200px;
-  
+} */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50rpx 0;
+  box-sizing: border-box;
+} 
+
+.box{
+  width: 750rpx;
+  margin: 10rpx auto;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.flag {
+  height: 50rpx;
+  width: 50rpx;
+  align-items:center; 
+}
+
+.content1{
+  z-index: 2;
+  white-space: nowrap;
+  animation: 4.8s loop linear infinite normal;
+  display: inline-block;
+  vertical-align: top;
+  color: #333;
+  margin-top: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  padding-left: 30rpx;
+  padding-right: 70rpx;
+  color: white;
+}
+
+.content2{
+  z-index: 2;
+  white-space: nowrap;
+  animation: 5.3s loop linear infinite normal;
+  display: inline-block;
+  vertical-align: top;
+  color: #333;
+  margin-top: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  padding-left: 30rpx;
+  padding-right: 70rpx;
+  color: white;
+}
+
+.content3{
+  z-index: 2;
+  white-space: nowrap;
+  animation: 5.5s loop linear infinite normal;
+  display: inline-block;
+  vertical-align: top;
+  color: #333;
+  margin-top: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  padding-left: 30rpx;
+  padding-right: 70rpx;
+  color: white;
+}
+
+.content4{
+  z-index: 2;
+  white-space: nowrap;
+  animation: 5.1s loop linear infinite normal;
+  display: inline-block;
+  vertical-align: top;
+  color: #333;
+  margin-top: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  padding-left: 30rpx;
+  padding-right: 70rpx;
+  color: white;
+}
+
+.content5{
+  z-index: 2;
+  white-space: nowrap;
+  animation: 5s loop linear infinite normal;
+  display: inline-block;
+  vertical-align: top;
+  color: #333;
+  margin-top: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  padding-left: 30rpx;
+  padding-right: 70rpx;
+  color: white;
+}
+/* .content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  padding-left: 30rpx;
+  padding-right: 70rpx;
+  background-color: rgb(146, 145, 145);
+  border-top:rgb(250, 246, 246);
+  border-top-width: 1rpx;
+  border-top-style: solid;
+  color: white;
+} */
+
+@keyframes loop {
+  0% {
+    transform: translateX(350px);
+    -webkit-transform: translateX(350px);
+  }
+
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes loop {
+  0% {
+    transform: translateX(300px);
+    -webkit-transform: translateX(300px);
+  }
+
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+  }
 }

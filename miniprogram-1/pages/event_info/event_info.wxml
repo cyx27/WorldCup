@@ -7,7 +7,11 @@
     赛程
   </view>
 </view>
+
 <view wx:if="{{nowgroup}}">
+  <view class="content">
+    点击球队所在行查看球队信息
+  </view>
 <view class="team">
     <view class="title" >A组</view>
     <view wx:for="{{groupA}}" wx:key="*this">

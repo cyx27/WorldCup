@@ -59,7 +59,6 @@ Page({
       chuxianH:[],
     },
     checkboxChangeA: function(e) {
-    //   console.log(e)
       let name = e.currentTarget.dataset.name
       for (let i = 0; i < this.data.itemsA.length; i++) {
         if (this.data.itemsA[i].name == name) {
@@ -96,11 +95,9 @@ Page({
             }
         }
       }
-      console.log(this.data.chuxianA)
     },
     
     checkboxChangeB: function(e) {
-        //   console.log(e)
           let name = e.currentTarget.dataset.name
           for (let i = 0; i < this.data.itemsB.length; i++) {
             if (this.data.itemsB[i].name == name) {
@@ -137,10 +134,8 @@ Page({
                 }
             }
           }
-          console.log(this.data.chuxianB)
       },
       checkboxChangeC: function(e) {
-        //   console.log(e)
           let name = e.currentTarget.dataset.name
           for (let i = 0; i < this.data.itemsC.length; i++) {
             if (this.data.itemsC[i].name == name) {
@@ -177,10 +172,8 @@ Page({
                 }
             }
           }
-          console.log(this.data.chuxianC)
       },
       checkboxChangeD: function(e) {
-        //   console.log(e)
           let name = e.currentTarget.dataset.name
           for (let i = 0; i < this.data.itemsD.length; i++) {
             if (this.data.itemsD[i].name == name) {
@@ -217,10 +210,8 @@ Page({
                 }
             }
           }
-          console.log(this.data.chuxianD)
       },
       checkboxChangeE: function(e) {
-        //   console.log(e)
           let name = e.currentTarget.dataset.name
           for (let i = 0; i < this.data.itemsE.length; i++) {
             if (this.data.itemsE[i].name == name) {
@@ -257,10 +248,8 @@ Page({
                 }
             }
           }
-          console.log(this.data.chuxianE)
       },
       checkboxChangeF: function(e) {
-        //   console.log(e)
           let name = e.currentTarget.dataset.name
           for (let i = 0; i < this.data.itemsF.length; i++) {
             if (this.data.itemsF[i].name == name) {
@@ -297,10 +286,8 @@ Page({
                 }
             }
           }
-          console.log(this.data.chuxianF)
       },
       checkboxChangeG: function(e) {
-        //   console.log(e)
           let name = e.currentTarget.dataset.name
           for (let i = 0; i < this.data.itemsG.length; i++) {
             if (this.data.itemsG[i].name == name) {
@@ -337,10 +324,8 @@ Page({
                 }
             }
           }
-          console.log(this.data.chuxianG)
       },
       checkboxChangeH: function(e) {
-        //   console.log(e)
           let name = e.currentTarget.dataset.name
           for (let i = 0; i < this.data.itemsH.length; i++) {
             if (this.data.itemsH[i].name == name) {
@@ -377,7 +362,6 @@ Page({
                 }
             }
           }
-          console.log(this.data.chuxianH)
       },
     post: function(e) {
       if(this.data.chuxianA.length<2||this.data.chuxianB.length<2||this.data.chuxianC.length<2||this.data.chuxianD.length<2||this.data.chuxianE.length<2||this.data.chuxianF.length<2||this.data.chuxianG.length<2||this.data.chuxianH.length<2){
