@@ -19,7 +19,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 30rpx;
-  margin-top:200rpx;
+  margin-top:300rpx;
 }
 /* .main .box{
   width: 300rpx;
