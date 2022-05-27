@@ -24,13 +24,13 @@
     </view>
     
     <view style="position: absolute; left: 526rpx; top: 346rpx">
-      <image src="/image/medal-bronze.png" style="position: absolute; left: 40rpx; top: -178rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
-      <image src="{{winners3[two].url}}" style="position: absolute; height: 100rpx; width: 94rpx; left: 40rpx; top: -78rpx"></image>
+      <image src="/image/medal-bronze.png" style="position: absolute; left: 40rpx; top: -182rpx; width: 94rpx; height: 100rpx; display: block; box-sizing: border-box"></image>
+      <image src="{{winners3[two].url}}" style="position: absolute; height: 100rpx; width: 94rpx; left: 40rpx; top: -90rpx"></image>
       当前票数：{{winners3[two].vote}}
     </view> 
   </view>
   <view style="position: absolute; left: 39rpx; top: 450rpx">
-  点击投票按钮进行投票，点击国旗图标进行评论
+  点击国旗图标评论你喜欢的球队
   </view>
     <!-- <button bindtap="resetVote" style="border: solid;">重置</button> -->
     <view class="list">

@@ -1,5 +1,15 @@
 Page({
 
+  onLoad:function(){
+    let that=this
+    
+    wx.showToast({
+      title:'点击球队所在行查看球队信息',
+      icon:'none',
+      duration:3000
+    })
+  },
+
   data: {
     schedule:[],
     nowgroup:true,
@@ -65,10 +75,12 @@ Page({
   },
   switchtoschedule:function(e){
     let that = this;
+
     this.setData({
       nowgroup:false,
       corrent:0
     }),
+
     wx.request({
       url: that.data.urls[that.data.corrent],
       data:{},
