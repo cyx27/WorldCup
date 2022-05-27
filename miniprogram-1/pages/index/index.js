@@ -40,11 +40,7 @@ Page({
 
   // onLoad(){
   //   let that = this;
-<<<<<<< HEAD
   //   var url="https://segmenter.xyz:8000";
-=======
-  //   var url="http://150.158.20.204:8000";
->>>>>>> d311ab3c4707e7323747806ec224b10853fc6b9f
   //   wx.request({
   //       url: url+"/getcommentall",
   //       method:'get',
@@ -64,7 +60,6 @@ Page({
   //          }
   //     })
   // },
-<<<<<<< HEAD
 
   onShow(){
     let that = this;
@@ -89,32 +84,6 @@ Page({
       })  
   },
 
-=======
-
-  onShow(){
-    let that = this;
-    var url="http://150.158.20.204:8000";
-    wx.request({
-        url: url+"/getcommentall",
-        method:'get',
-        header: {'Content-Type': 'application/json'},
-        success: function(res) {
-          console.log(res.data);
-                that.setData({
-                  msgData:that.shuffle(res.data,10)
-                })
-                for(var i=0;i<that.data.msgData.length;i++){
-                  that.data.msgData[i].teamId = that.data.flagUrl[that.data.msgData[i].teamId-1]
-                }
-                console.log(that.data.msgData)
-                that.setData({
-                  msgData:that.data.msgData
-                })
-           }
-      })  
-  },
-
->>>>>>> d311ab3c4707e7323747806ec224b10853fc6b9f
 shuffle(arr, num) {
     var temp_array = new Array();
     for (var index in arr) {

@@ -17,11 +17,7 @@ Page({
   },
   getallvote:function(e){
     let that = this;
-<<<<<<< HEAD
     var url="https://segmenter.xyz:8000";
-=======
-    var url="http://150.158.20.204:8000";
->>>>>>> d311ab3c4707e7323747806ec224b10853fc6b9f
     wx.request({
           url: url+"/getvoteall",
           data:{
@@ -77,11 +73,7 @@ Page({
   },
   updatethevote:function(e){
     let that = this;
-<<<<<<< HEAD
     var url="https://segmenter.xyz:8000";
-=======
-    var url="http://150.158.20.204:8000";
->>>>>>> d311ab3c4707e7323747806ec224b10853fc6b9f
     wx.request({
           url: url+"/vote",
           data:{
@@ -97,11 +89,7 @@ Page({
   },
   getcurrentvote:function(e){
     let that = this;
-<<<<<<< HEAD
     var url="https://segmenter.xyz:8000";
-=======
-    var url="http://150.158.20.204:8000";
->>>>>>> d311ab3c4707e7323747806ec224b10853fc6b9f
     wx.request({
           url: url+"/getvote",
           data:{
