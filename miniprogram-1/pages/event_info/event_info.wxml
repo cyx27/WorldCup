@@ -1,0 +1,171 @@
+<wxs src="../../config/tick.wxs" module="tick"/>
+<view class="topbarfather">
+  <view class="topbar {{nowgroup?'pick':''}}" bindtap="switchtogroup">
+    分组
+  </view>
+  <view class="topbar {{!nowgroup?'pick':''}}" style="left: 50%;" bindtap="switchtoschedule">
+    赛程
+  </view>
+</view>
+
+<view wx:if="{{nowgroup}}">
+<view class="team">
+    <view class="title" >A组</view>
+    <view wx:for="{{groupA}}" wx:key="*this">
+    <navigator url="/pages/team_info/team_info?team_name={{item[0]}}">
+     <view class="content">
+      <text decode="{{true}}">{{item[2]}}&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <image src="{{item[1]}}" class="flag"></image>
+      <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item[0]}}</text>
+      </view>
+      </navigator>
+    </view>
+</view>
+
+<view class="team">
+    <view class="title">B组</view>
+    <view wx:for="{{groupB}}" wx:key="*this">
+    <navigator url="/pages/team_info/team_info?team_name={{item[0]}}">
+        <view class="content">
+      <text decode="{{true}}">{{item[2]}}&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <image src="{{item[1]}}" class="flag"></image>
+      <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item[0]}}</text>
+      </view>
+    </navigator>
+    </view>
+</view>
+
+<view class="team">
+    <view class="title">C组</view>
+    <view wx:for="{{groupC}}" wx:key="*this">
+    <navigator url="/pages/team_info/team_info?team_name={{item[0]}}">
+        <view class="content">
+      <text decode="{{true}}">{{item[2]}}&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <image src="{{item[1]}}" class="flag"></image>
+      <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item[0]}}</text>
+      </view>
+    </navigator>
+    </view>
+</view>
+
+
+<view class="team">
+    <view class="title">D组</view>
+    <view wx:for="{{groupD}}" wx:key="*this">
+    <navigator url="/pages/team_info/team_info?team_name={{item[0]}}">
+        <view class="content">
+      <text decode="{{true}}" >{{item[2]}}&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <image src="{{item[1]}}" class="flag"></image>
+      <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item[0]}}</text>
+      </view>
+    </navigator>
+    </view>
+</view>
+
+<view class="team">
+    <view class="title">E组</view>
+    <view wx:for="{{groupE}}" wx:key="*this">
+    <navigator url="/pages/team_info/team_info?team_name={{item[0]}}">
+        <view class="content">
+      <text decode="{{true}}">{{item[2]}}&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <image src="{{item[1]}}" class="flag"></image>
+      <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item[0]}}</text>
+      </view>
+    </navigator>
+    </view>
+</view>
+
+
+<view class="team">
+    <view class="title">F组</view>
+    <view wx:for="{{groupF}}" wx:key="*this">
+    <navigator url="/pages/team_info/team_info?team_name={{item[0]}}">
+        <view class="content">
+      <text decode="{{true}}">{{item[2]}}&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <image src="{{item[1]}}" class="flag"></image>
+      <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item[0]}}</text>
+      </view></navigator>
+    </view>
+</view>
+
+<view class="team">
+    <view class="title">G组</view>
+    <view wx:for="{{groupG}}" wx:key="*this">
+    <navigator url="/pages/team_info/team_info?team_name={{item[0]}}">
+        <view class="content">
+      <text decode="{{true}}">{{item[2]}}&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <image src="{{item[1]}}" class="flag"></image>
+      <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item[0]}}</text>
+      </view></navigator>
+    </view>
+</view>
+
+
+<view class="team">
+    <view class="title">H组</view>
+    <view wx:for="{{groupH}}" wx:key="*this">
+    <navigator url="/pages/team_info/team_info?team_name={{item[0]}}">
+        <view class="content">
+      <text decode="{{true}}">{{item[2]}}&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <image src="{{item[1]}}" class="flag"></image>
+      <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item[0]}}</text>
+      </view></navigator>
+    </view>
+</view>
+</view>
+
+<view wx:if="{{!nowgroup}}">
+  <view class="scheduletit">
+  <view wx:if="{{corrent==0}}">
+    <view style="top: 25%;left:37%;position: absolute;">小组赛 第{{corrent+1}}轮</view>
+    <view class="next" bindtap="goahead" data-operation="{{1}}">下一轮-</view>
+  </view>
+  <view wx:if="{{corrent>0&&corrent<=2}}">
+    <view class="head" bindtap="goahead" data-operation="{{-1}}"> -上一轮 </view>
+    <view style="top: 25%;left:37%;position: absolute;">小组赛 第{{corrent+1}}轮</view>
+    <view class="next" bindtap="goahead" data-operation="{{1}}">下一轮- </view>
+  </view>
+  <view wx:if="{{corrent==3}}">
+    <view class="head" bindtap="goahead" data-operation="{{-1}}"> -上一轮 </view>
+    <view style="top: 25%;left:45%;position: absolute;">1/8决赛</view>
+    <view class="next" bindtap="goahead" data-operation="{{1}}">下一轮- </view>
+  </view>
+  <view wx:if="{{corrent==4}}">
+    <view class="head" bindtap="goahead" data-operation="{{-1}}"> -上一轮 </view>
+    <view style="top: 25%;left:45%;position: absolute;">1/4决赛</view>
+    <view class="next" bindtap="goahead" data-operation="{{1}}">下一轮- </view>
+  </view>
+  <view wx:if="{{corrent==5}}">
+    <view class="head" bindtap="goahead" data-operation="{{-1}}"> -上一轮 </view>
+    <view style="top: 25%;left:46%;position: absolute;">半决赛</view>
+    <view class="next" bindtap="goahead" data-operation="{{1}}">下一轮- </view>
+  </view>
+  <view wx:if="{{corrent==6}}">
+    <view class="head" bindtap="goahead" data-operation="{{-1}}"> -上一轮 </view>
+    <view style="top: 25%;left:43%;position: absolute;">三四名决赛</view>
+    <view class="next" bindtap="goahead" data-operation="{{1}}">下一轮- </view>
+  </view>
+  <view wx:if="{{corrent==7}}">
+    <view class="head" bindtap="goahead" data-operation="{{-1}}"> -上一轮 </view>
+    <view style="top: 25%;left:47%;position: absolute;">决赛</view>
+  </view>
+  </view>
+  <view wx:for="{{schedule}}" wx:key="key" wx:for-item="item">
+    <view class='whitebar' wx:if='{{index%2==0}}' style="flex-direction:row;">
+      <view class="time">{{tick.bar(item["start_play"])}} </view>
+      <view class="teamname" style="left: 41%;">{{item['team_A_name']}}</view>
+      <image src="{{item['team_A_logo']}}" class="flag" style="position: absolute;top:20%;left: 56%;"/> 
+      <view style="position: absolute;top:4%;left: 63%;font-size: 25rpx;">VS</view> 
+      <image src="{{item['team_B_logo']}}" class="flag" style="position: absolute;top:20%;left: 68%;"/> 
+      <view class="teamname" style="left: 76%;">{{item['team_B_name']}}</view>
+    </view>
+    <view class='greybar' wx:if='{{index%2==1}}' style="flex-direction:row;">
+      <view class="time">{{tick.bar(item["start_play"])}} </view>
+      <view class="teamname" style="left: 41%;">{{item['team_A_name']}}</view>
+      <image src="{{item['team_A_logo']}}" class="flag" style="position: absolute;top:20%;left: 56%;"/> 
+      <view style="position: absolute;top:4%;left: 63%;font-size: 25rpx;">VS</view> 
+      <image src="{{item['team_B_logo']}}" class="flag" style="position: absolute;top:20%;left: 68%;"/> 
+      <view class="teamname" style="left: 76%;">{{item['team_B_name']}}</view>
+    </view>
+  </view>
+</view>

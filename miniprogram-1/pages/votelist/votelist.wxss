@@ -1,0 +1,67 @@
+/* pages/votelist/votelist.wxss */
+
+.main .pic{
+  width: 750rpx;
+  height: 360rpx;
+}
+
+.main .pic image{ width: 100%; height: 100%;}
+
+.container{
+  background: #fff;
+  min-height: 300rpx;
+  border-radius: 80rpx 80rpx 0 0;
+  transform: translateY(-72px);
+}
+
+.main .list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  margin-top:300rpx;
+}
+/* .main .box{
+  width: 300rpx;
+  height: 325rpx;
+  border: 1rpx solid #727c77;
+  margin-bottom: 80rpx;
+  overflow: hidden;
+  border-bottom-width: 5rpx;
+} */
+
+.main .box .pic{
+  width: 300rpx;
+  height: 200rpx;
+  position: relative;
+}
+
+.main .box .pic image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.main .box .text{
+  height: 25rpx;
+  font-weight: bold;
+  font-size: 25rpx;
+  vertical-align: middle;
+  display: flex;    /*设置显示样式**/
+  align-items: center;    /**子view垂直居中*/
+  vertical-align: center; /**垂直居中*/
+  justify-content: center; /**内容居中*/
+  flex-direction:row; /**子view排列方式row--水平 column--垂直*/
+}
+.main .rank{
+    display: flex;
+}
+.center{
+    display: flex;    /*设置显示样式**/
+    align-items: center;    /**子view垂直居中*/
+    vertical-align: center; /**垂直居中*/
+    justify-content: center; /**内容居中*/
+    flex-direction:row; /**子view排列方式row--水平 column--垂直*/
+}
+
+

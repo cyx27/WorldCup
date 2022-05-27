@@ -1,0 +1,69 @@
+<!--pages/team_info.wxml-->
+<view class="start">
+  <image src="{{flags[name]}}"></image>
+  <view style="position: absolute;left:0;right:0;margin-left:auto;margin-right:auto;bottom: 11%;">{{name}}</view>
+</view>
+<view class="titlebat">
+  <view class="text">简介</view>
+</view>
+<view class="background">
+  <view style="color: #999999;">
+  <view wx:for="{{info}}" wx:for-item="p" style="font-size: 38rpx;"wx:key="*this">
+    <view>
+    <text decode="{{true}}">&nbsp;&nbsp;</text>
+    成立: <span style="color: black;font-size: 35rpx;"> {{p['成立']}}</span>
+    <text decode="{{true}}">&nbsp;&nbsp;</text>
+    城市: <span style="color: black;font-size: 35rpx;"> {{p['城市']}}</span>
+    </view>
+    <view>
+    <text decode="{{true}}">&nbsp;&nbsp;</text>
+    人员: <span style="color: black;font-size: 35rpx;"> {{p['人员']}}</span>
+    <text decode="{{true}}">&nbsp;&nbsp;</text>
+    电话: <span style="color: black;font-size: 35rpx;"> {{p['电话']}}</span>
+    </view>
+    <view>
+    <text decode="{{true}}">&nbsp;&nbsp;</text>
+    邮箱: <span style="color: black;font-size: 35rpx;"> {{p['邮箱']}}</span>
+    </view>
+    <view style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
+    <text decode="{{true}}">&nbsp;&nbsp;</text>
+    地址: <span style="color: black;font-size: 35rpx;"> {{p['地址']}}</span>
+    </view>
+  </view>
+  </view>
+
+</view>
+<swiper display-multiple-items='1' current='{{centerItem}}' circular='true' previous-margin='50' next-margin='50' autoplay='true' interval='3000' indicator-dots="true" bindchange="ChangeHI" easing-function="easeInOutCubic">
+    <swiper-item wx:for="{{swiperList}}" wx:key="*this" >
+      <view class='optionBox' style='text-align:center'>
+        <view class='mask' wx:if='{{ index != currentId }}'></view>
+        <image src="{{item}}" mode='aspectFit' />
+        <view class='swiperText' style='font-size:0.5em;'></view>
+      </view>
+    </swiper-item> 
+</swiper>
+<view class="titlebat">
+  <view class="text">球员</view>
+</view>
+<view class="title" style="flex-direction:row;">
+  <view class="item1">位置</view>
+  <view class="item2">姓名</view>
+</view>
+<view wx:for="{{player}}" wx:for-item="pro" wx:key="idx" class="players" style="flex-direction:column;">
+  <view wx:for="{{pro}}" wx:key="key" wx:for-item="item" wx:for-index="name" >
+    <view class='whitebar' wx:if='{{item[1][0]%2==0}}' style="flex-direction:row;">
+      <view class="position">{{item[1][1]}}</view>
+      <view class="player">
+        <image src="{{item[1][2]}}" style="height: 50rpx;width: 50rpx;position: absolute;top:20rpx"/> 
+        <view style="left: 180rpx;position: absolute;">{{item[0]}}</view>
+      </view>
+     </view>
+    <view class='greybar' wx:if='{{item[1][0]%2==1}}' style="flex-direction:row;">
+      <view class="position">{{item[1][1]}}</view> 
+      <view class="player">
+        <image src="{{item[1][2]}}" style="height: 50rpx;width: 50rpx;position: absolute;top:20rpx"/> 
+        <view style="left: 180rpx;position: absolute;">{{item[0]}}</view>
+      </view>
+    </view>
+  </view>
+</view>

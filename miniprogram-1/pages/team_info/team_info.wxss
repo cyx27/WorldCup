@@ -1,0 +1,123 @@
+/* pages/team_info.wxss */
+swiper{
+    height: 200px;
+  }
+  .optionBox {
+    width: 100%;
+    height: 100%;
+  }
+  .title{
+    width: 100%;
+    height: 60rpx;
+    background: #EBECED;
+    display:flex;
+  }
+  .start{
+    position: relative;
+    width: 100%;
+    height: 200rpx;
+    background: #888888;
+    text-align: center;
+    font-size: 40rpx;
+    color: #ffffff;
+    margin: 0;
+  }
+  .background{
+    background: #f7f7f7;
+    width: 100%;
+    font-size: 40rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .start image{
+    width: 160rpx;
+    height: 130rpx;
+
+  }
+  .item1{
+    width: 120rpx;
+    height: 60rpx;
+    text-align: center;
+    font-size: 40rpx;
+    color: #888888;
+  }
+  .item2{
+    width: 200rpx;
+    height: 60rpx;
+    font-size: 40rpx;
+    text-align: center;
+    color: #888888;
+  }
+  .titlebat{
+    position: relative;
+    width: 100%;
+    height: 80rpx;
+    background: #f7f7f7;
+    border-left: 3px solid #16b13a;
+  }
+  .text{
+    position: absolute;
+    font-size: 40rpx;
+    top: 15%;
+    left: 30rpx;
+  }
+  .item{
+    display: inline-block;
+    text-align: center;
+    color: #888;
+  }
+  .whitebar{
+    width: 100%;
+    position: relative;
+    height: 90rpx;
+    line-height: 90rpx;
+    background: #fffefe;
+    display: flex;
+  }
+  .greybar{
+    width: 100%;
+    position: relative;
+    height: 90rpx;
+    line-height: 90rpx;
+    background: #f7f7f7;
+    display: flex;
+  }
+  .optionBox image {
+    width: 100%;
+    height: 100%;
+  }
+  .swiperText {
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    font-family: bariol_bold;
+    font-size: 0.5em;
+    color: #4a4a4a;
+  }
+  
+  .mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .5);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .perch {
+    width: 100%;
+    height: 100%;
+  }
+  .position{
+    width: 120rpx;
+    text-align: center;
+  }
+  .player{
+    width: 500rpx;
+  }
+  .players{
+    display: flex;
+  }
+
+  

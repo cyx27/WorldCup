@@ -1,9 +1,15 @@
 {
     "pages": [
+        "pages/login/login",
         "pages/index/index",
         "pages/logs/logs",
         "pages/event_info/event_info",
-        "pages/game/game"
+        "pages/game/game",
+        "pages/team_info/team_info",
+        "pages/schedule/schedule",
+        "pages/guess/guess",
+        "pages/votelist/votelist",
+        "pages/vote_each/vote_each"
     ],
     "tabBar": {
         "color": "#333",
@@ -11,33 +17,36 @@
         "position": "bottom",
         "borderStyle": "black",
         "list": [
-          {
-            "pagePath": "pages/index/index",
-            "text": "首页",
-            "iconPath": "static/images/ball.png",
-            "selectedIconPath": "static/images/ball-active.png"
-          },
-          {
-            "pagePath": "pages/event_info/event_info",
-            "text": "赛事信息",
-            "iconPath": "static/images/rank.png",
-            "selectedIconPath": "static/images/rank-active.png"
-          },
-          {
-            "pagePath": "pages/game/game",
-            "text": "趣味游戏",
-            "iconPath": "static/images/stats.png",
-            "selectedIconPath": "static/images/stats-active.png"
-          }
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "static/images/logo/ball.png",
+                "selectedIconPath": "static/images/logo/ball-active.png"
+            },
+            {
+                "pagePath": "pages/event_info/event_info",
+                "text": "赛事信息",
+                "iconPath": "static/images/logo/rank.png",
+                "selectedIconPath": "static/images/logo/rank-active.png"
+            },
+            {
+                "pagePath": "pages/game/game",
+                "text": "趣味游戏",
+                "iconPath": "static/images/logo/stats.png",
+                "selectedIconPath": "static/images/logo/stats-active.png"
+            }
         ]
-      },
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#CEF6EC",
-        "navigationBarTitleText": "test",
-        "navigationBarTextStyle": "black"
     },
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#888888",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": true
+    },
+    "cloud": true,
     "style": "v2",
     "sitemapLocation": "sitemap.json",
-    "useExtendedLib": {}
+    "useExtendedLib": {},
+    "lazyCodeLoading":"requiredComponents"
 }
