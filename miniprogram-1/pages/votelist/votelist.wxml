@@ -4,8 +4,11 @@
     <image src="/image/mid_bk.jpg"></image>
   </view>
 
+    <view wx:if="{{res==false}}">
+        <image bindtap="oneclick" src="../../image/click2.png" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 2;"></image>
+    </view>
   <view class="container" style="background-color: #F2F2F2;">
-
+    
 
 <!-- 这是前三名的信息, 优化一下布局 -->
  
