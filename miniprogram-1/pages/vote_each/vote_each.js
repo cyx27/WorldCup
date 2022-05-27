@@ -38,7 +38,11 @@ Page({
         })
         
         let that = this;
+<<<<<<< HEAD
         var url="https://segmenter.xyz:8000";
+=======
+        var url="http://150.158.20.204:8000";
+>>>>>>> d311ab3c4707e7323747806ec224b10853fc6b9f
         wx.request({
             url: url+"/getcomment",
             data:{
@@ -87,7 +91,11 @@ Page({
     
     getallcomment:function(e){
         let that = this;
+<<<<<<< HEAD
         var url="https://segmenter.xyz:8000";
+=======
+        var url="http://150.158.20.204:8000";
+>>>>>>> d311ab3c4707e7323747806ec224b10853fc6b9f
         wx.request({
             url: url+"/getcomment",
             data:{
@@ -130,7 +138,11 @@ Page({
             time: dataTime,
         })//先设置时间
         let that = this;
+<<<<<<< HEAD
         var url="https://segmenter.xyz:8000";
+=======
+        var url="http://150.158.20.204:8000";
+>>>>>>> d311ab3c4707e7323747806ec224b10853fc6b9f
         wx.request({
             url: url+"/comment",
             data:{
@@ -154,7 +166,11 @@ Page({
     thumpUp(e) {
         let time = e.currentTarget.dataset.time
         let that = this;
+<<<<<<< HEAD
         var url="https://segmenter.xyz:8000";
+=======
+        var url="http://150.158.20.204:8000";
+>>>>>>> d311ab3c4707e7323747806ec224b10853fc6b9f
         const app = getApp()
         wx.request({
             url: url+"/like",
