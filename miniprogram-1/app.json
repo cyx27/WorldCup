@@ -11,7 +11,7 @@
         "pages/vote_each/vote_each"
     ],
     "tabBar": {
-        "color": "#333",
+        "color": "333",
         "selectedColor": "#00aa98",
         "position": "bottom",
         "borderStyle": "black",
@@ -38,7 +38,7 @@
     },
     "window": {
         "backgroundTextStyle": "dark",
-        "navigationBarBackgroundColor": "#888888",
+        "navigationBarBackgroundColor": "#04BE02",
         "navigationBarTitleText": "",
         "navigationBarTextStyle": "black",
         "enablePullDownRefresh": true

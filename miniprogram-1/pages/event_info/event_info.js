@@ -4,7 +4,7 @@ Page({
     let that=this
     
     wx.showToast({
-      title:'点击球队所在行查看球队信息',
+      title:'点击球队所在行,可以查看球队信息~',
       icon:'none',
       duration:3000
     })

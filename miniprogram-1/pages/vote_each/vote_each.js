@@ -66,9 +66,8 @@ Page({
                     })
                }
           })
-        
-    
     },
+
     updataThumb: function(){
       let tempHasVoted = this.data.hasVoted
       for(let temp = 0; temp < this.data.msgData.length; temp++){
@@ -109,7 +108,19 @@ Page({
          inputVal: ev.detail.value//暂存输入框的内容
         });
     },
+
     addMsg() {
+        console.log(this.data.inputVal)
+        if(this.data.inputVal==""||this.data.inputVal==null){
+          wx.showModal({
+            title: "警告",
+            content: "评论不能为空",
+            showCancel: !1,
+            success: function(t) {
+                t.confirm;
+            }
+          });
+        }else{
         let app = wx.getStorageSync('userInfo')
         this.setData({
             nickName: app.nickName,
@@ -150,7 +161,9 @@ Page({
         this.setData({
             inputVal: "",
         })
+      }
     },
+
     thumpUp(e) {
         let time = e.currentTarget.dataset.time
         let that = this;
