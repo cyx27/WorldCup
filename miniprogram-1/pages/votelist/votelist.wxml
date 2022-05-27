@@ -3,9 +3,11 @@
   <view class="pic">
     <image src="/image/mid_bk.jpg"></image>
   </view>
-
+    <view wx:if="{{res==false}}">
+        <image bindtap="oneclick" src="../../image/click2.png" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 2;"></image>
+    </view>
+    
   <view class="container" style="background-color: #F2F2F2;">
-
 
 <!-- 这是前三名的信息, 优化一下布局 -->
  
@@ -29,9 +31,9 @@
       当前票数：{{winners3[two].vote}}
     </view> 
   </view>
-  <view style="position: absolute; left: 39rpx; top: 450rpx">
+  <!-- <view style="position: absolute; left: 39rpx; top: 450rpx">
   点击国旗图标评论你喜欢的球队
-  </view>
+  </view> -->
     <!-- <button bindtap="resetVote" style="border: solid;">重置</button> -->
     <view class="list">
       <view class="box" wx:for-items="{{q32}}" wx:key="index" style="width: 22vw; height: 22vh; border: solid 2rpx; margin-top: 10rpx;">

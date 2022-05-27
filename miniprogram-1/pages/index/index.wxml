@@ -11,12 +11,12 @@
 <view>
 <image src="../../image/temp_background.jpg" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 0;"></image>
     <view wx:if="{{res==false}}">
-        <image bindtap="oneclick" src="../../image/click1.png" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 2;"></image>
+        <image bindtap="oneclick" src="../../image/click3.png" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 2;"></image>
     </view>
 </view>
 
 
-  <navigator url="/pages/login/login">
+  <navigator url="/pages/votelist/votelist">
     <image src="../../image/transparent_ball.png" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 1;"></image>
     <view class="box">
 
