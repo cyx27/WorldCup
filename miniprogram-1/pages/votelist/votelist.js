@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+      res: 0,
       zero: 0,
       one: 1,
       two: 2,
@@ -221,5 +222,11 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  oneclick:function(){
+    this.setData({
+        res: !0
+   })
+}
 })

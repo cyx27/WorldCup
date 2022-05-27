@@ -3,9 +3,8 @@
   <view class="pic">
     <image src="/image/mid_bk.jpg"></image>
   </view>
-
+ 
   <view class="container" style="background-color: #F2F2F2;">
-
 
 <!-- 这是前三名的信息, 优化一下布局 -->
  
@@ -30,10 +29,16 @@
     </view> 
   </view>
 
+
   <view style="position: absolute; justify-content: center;  top: 423rpx; color: #059205; font-size: larger;">
     点击国旗，给你喜欢的球队加油助威吧~
   </view>
   
+
+  <!-- <view style="position: absolute; left: 39rpx; top: 450rpx">
+  点击国旗图标评论你喜欢的球队
+  </view> -->
+
     <!-- <button bindtap="resetVote" style="border: solid;">重置</button> -->
     <view class="list">
       <view class="box" wx:for-items="{{q32}}" wx:key="index" style="width: 22vw; height: 22vh; border: solid 2rpx; margin-top: 10rpx;">
