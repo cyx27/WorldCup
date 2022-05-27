@@ -16,7 +16,7 @@
 </view>
 
 
-  <navigator url="/pages/votelist/votelist">
+  <navigator url="/pages/login/login">
     <image src="../../image/transparent_ball.png" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 1;"></image>
     <view class="box">
 

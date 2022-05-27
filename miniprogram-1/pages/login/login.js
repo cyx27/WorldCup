@@ -53,9 +53,10 @@ Page({
               userInfo: res.userInfo, //把获取到的数据列表赋值给 userInfo 改变里面的数据
               avatarUrl: res.userInfo.avatarUrl //把头像地址赋值给 avatarUrl
             }),
-            wx.switchTab({ //跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面 就是首页  
+            wx.navigateTo({
+                //跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面 就是首页  
               //用户授权成功后就要跳转到首页导航栏
-              url: "/pages/index/index",
+              url: "/pages/votelist/votelist",
             }); // 进入到首页后，出现消息提示窗，提示用户:'欢迎使用本小程序'的提示语
         },
         fail(err) { //接口调用失败的回调函数 用户拒绝授权登录后，出现的提示窗

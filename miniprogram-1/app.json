@@ -1,14 +1,13 @@
 {
     "pages": [
-        "pages/login/login",
         "pages/index/index",
-        "pages/logs/logs",
+        "pages/login/login",
+        "pages/votelist/votelist",
         "pages/event_info/event_info",
         "pages/game/game",
         "pages/team_info/team_info",
         "pages/schedule/schedule",
         "pages/guess/guess",
-        "pages/votelist/votelist",
         "pages/vote_each/vote_each"
     ],
     "tabBar": {
