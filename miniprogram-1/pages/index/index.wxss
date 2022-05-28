@@ -101,7 +101,24 @@
   padding-right: 70rpx;
   color: white;
 }
-
+.title-item{
+  color: #fff;
+  font-size: 70rpx;
+}
+.tui-conutdown-box {
+  display: inline-block;
+  line-height: 50rpx;
+  text-align: center;
+  color: rgb(255, 233, 121);
+  /* background-color: rgb(192, 190, 190); */
+  margin: 0 4rpx;
+  padding: 10rpx 20rpx;
+  font-size: 60rpx;
+  font-weight: 800;
+}
+.countdown-text{
+  color: rgb(255, 255, 255);
+}
 .content5{
   z-index: 2;
   white-space: nowrap;
