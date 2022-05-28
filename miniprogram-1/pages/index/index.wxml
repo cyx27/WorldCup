@@ -11,13 +11,26 @@
 <view>
 <image src="../../image/temp_background.jpg" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 0;"></image>
     <view wx:if="{{res==false}}">
-        <image bindtap="oneclick" src="../../image/click3.png" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 2;"></image>
+        <image bindtap="oneclick" src="../../image/click3.png" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 3;"></image>
     </view>
-</view>
-
-
-  <navigator url="/pages/login/login">
-    <image src="../../image/transparent_ball.png" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 1;"></image>
+    <view class="title-item" style="font-size:35rpx;position: absolute;width:750rpx;top:60rpx;text-align: center;z-index: 0;">距卡塔尔世界杯</view>
+    <view class="title-item" style="position: absolute;width:750rpx;top:110rpx;text-align: center;z-index: 0;">倒计时</view>
+<view class="countdown-item" style="position: absolute;width:750rpx;top:250rpx;text-align: center;z-index: 0;">
+  <view class="countdown-title">
+    <block>
+      <text class='tui-conutdown-box'>{{days}}</text>
+      <text class="countdown-text">天</text>
+      <text class='tui-conutdown-box'>{{hours}}</text>
+      <text class="countdown-text">时</text>
+      <text class='tui-conutdown-box'>{{minutes}}</text>
+      <text class="countdown-text">分</text>
+      <text class='tui-conutdown-box'>{{seconds}}</text>
+      <text class="countdown-text">秒</text>
+    </block>
+  </view>
+</view>  
+<navigator url="/pages/login/login">
+    <image src="../../image/transparent_ball.png" style="width:750rpx;height:1333.33rpx;position:absolute;z-index: 2;"></image>
     <view class="box">
 
         <view class="content1">
@@ -72,5 +85,9 @@
  
     </view>
   </navigator>
+</view>
+
+
+ 
 
 
