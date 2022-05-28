@@ -4,7 +4,7 @@
 const app = getApp()
 
 Page({
-    data: {  nowDate: '2022-11-21 18:00:00', //结束时间
+    data: {  nowDate: '2022/11/21 18:00:00', //结束时间
     countdown: '', //倒计时
     days: '00', //天
     hours: '00', //时

@@ -152,7 +152,7 @@
   </view>
   <view wx:for="{{schedule}}" wx:key="key" wx:for-item="item">
     <view class='whitebar' wx:if='{{index%2==0}}' style="flex-direction:row;">
-      <view class="time">{{tick.bar(item["start_play"])}} </view>
+      <view class="time" style="left: 10rpx;">{{tick.bar(item["start_play"])}} </view>
       <view class="teamname" style="left: 41%;">{{item['team_A_name']}}</view>
       <image src="{{item['team_A_logo']}}" class="flag" style="position: absolute;top:20%;left: 56%;"/> 
       <view style="position: absolute;top:4%;left: 63%;font-size: 25rpx;">VS</view> 
@@ -160,7 +160,7 @@
       <view class="teamname" style="left: 76%;">{{item['team_B_name']}}</view>
     </view>
     <view class='greybar' wx:if='{{index%2==1}}' style="flex-direction:row;">
-      <view class="time">{{tick.bar(item["start_play"])}} </view>
+      <view class="time" style="left: 10rpx;">{{tick.bar(item["start_play"])}} </view>
       <view class="teamname" style="left: 41%;">{{item['team_A_name']}}</view>
       <image src="{{item['team_A_logo']}}" class="flag" style="position: absolute;top:20%;left: 56%;"/> 
       <view style="position: absolute;top:4%;left: 63%;font-size: 25rpx;">VS</view> 

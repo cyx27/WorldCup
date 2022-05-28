@@ -85,6 +85,12 @@ Page({
       url: that.data.urls[that.data.corrent],
       data:{},
       success: function(res) {
+        let p=res.data.content.matches
+        var i
+        for(i=0;i<p.length;i++){
+          let ss=String(res.data.content.matches[i]["start_play"]).replace(/-/g,"/")
+          res.data.content.matches[i]["start_play"]=ss
+        }
         that.setData({
           schedule:res.data.content.matches
         });
@@ -107,6 +113,12 @@ Page({
     url: that.data.urls[that.data.corrent],
     data:{},
     success: function(res) {
+        let p=res.data.content.matches
+        var i
+        for(i=0;i<p.length;i++){
+          let ss=String(res.data.content.matches[i]["start_play"]).replace(/-/g,"/")
+          res.data.content.matches[i]["start_play"]=ss
+        }
       that.setData({
         schedule:res.data.content.matches
       });
